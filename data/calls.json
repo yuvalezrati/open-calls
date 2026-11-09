@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T09:30:04Z",
+  "updatedAt": "2026-11-09T09:30:42Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -938,6 +938,28 @@
       ],
       "topics": [
         "any"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-09"
+    },
+    {
+      "id": "mute-photo-festival-2027",
+      "title": "International Mute Photo Festival 2027",
+      "org": "International Mute Photo Festival",
+      "url": "https://on-the-move.org/news/international-mute-photo-festival-2027-call-photography-greece",
+      "deadline": "2027-04-30",
+      "region": "abroad",
+      "place": "סאמוס, יוון",
+      "type": "festival",
+      "fee": "free",
+      "desc": "קול קורא לסדרות של 6–9 צילומים שצולמו במצלמת ילדים עם מדפסת תרמית. הפסטיבל מממן הדפסה מוגדלת ותערוכה בסאמוס ביולי 2027.",
+      "tags": [
+        "חינם",
+        "סדרה"
+      ],
+      "topics": [
+        "photo"
       ],
       "verified": false,
       "status": "open",
