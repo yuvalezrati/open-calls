@@ -113,10 +113,21 @@ function pill(c) {
   const cls = d <= 7 ? "p-soon" : d <= 30 ? "p-mid" : "p-far";
   return `<span class="pill ${cls}">${d === 0 ? "היום" : d === 1 ? "מחר" : "עוד " + d + " ימים"}</span>`;
 }
+// new calls from the daily scan may arrive without topics: guess them from the text, else "open to all"
+const KW = { photo: /צילום|צלם|photo/i, video: /וידאו|קולנוע|סרט|video|film|moving image/i, sound: /סאונד|קול|sound|audio/i,
+  painting: /ציור|רישום|painting|drawing/i, sculpture: /פיסול|מיצב|sculpture|installation/i, newmedia: /מדיה חדשה|דיגיטל|new media|digital/i,
+  performance: /פרפורמנס|מופע|performance/i, public: /מרחב הציבורי|public space|public art/i, social: /חברתי|אקטיביזם|מחאה|activis|social/i,
+  text: /טקסט|פרסום|ספר|text|publication|zine/i };
+function topicsOf(c) {
+  if (c.topics && c.topics.length) return c.topics;
+  const hay = [c.title, c.desc, (c.tags || []).join(" ")].join(" ");
+  const t = Object.keys(KW).filter((k) => KW[k].test(hay));
+  return t.length ? [...t, "any"] : ["any"];
+}
 const hasInterests = () => !!(token && mine.interests && mine.interests.length);
 // a call "fits" when it shares a topic with you; calls open to every medium ("any") fit everyone
-const fits = (c) => (c.topics || ["any"]).some((t) => t === "any" || mine.interests.includes(t));
-const strongFit = (c) => (c.topics || []).some((t) => mine.interests.includes(t));
+const fits = (c) => topicsOf(c).some((t) => t === "any" || mine.interests.includes(t));
+const strongFit = (c) => topicsOf(c).some((t) => mine.interests.includes(t));
 const openCalls = () => calls.filter((c) => c.status !== "recurring" && (!c.deadline || days(c.deadline) >= 0));
 function filtered() {
   let list = state.tab === "open" ? openCalls() : calls.filter((c) => c.status === "recurring");
@@ -193,7 +204,7 @@ function render() {
   $("list").innerHTML = `<div class="strip">${list.map((c, i) => {
     const done = !!mine.submitted[c.id], saved = !!mine.saved[c.id];
     const others = (friends[c.id] || []).filter((n) => !(done && n === myName));
-    const hits = hasInterests() ? (c.topics || []).filter((t) => mine.interests.includes(t)) : [];
+    const hits = hasInterests() ? topicsOf(c).filter((t) => mine.interests.includes(t)) : [];
     const tags = hits.map((t) => `<span class="tag match">${esc(TOPICS[t])}</span>`).join("") + [TYPE_HE[c.type] || "", (REGION_HE[c.region] || "") + (c.place ? " · " + c.place : "")]
       .filter(Boolean).map((t) => `<span class="tag">${esc(t)}</span>`).join("")
       + (c.fee === "free" ? `<span class="tag free">בלי דמי הגשה</span>` : c.fee === "paid" ? `<span class="tag">${esc(c.feeNote || "בתשלום")}</span>` : "")
