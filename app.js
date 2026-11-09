@@ -33,11 +33,11 @@ function setToken(t) {
   try { localStorage.setItem(TOKEN_KEY, t); } catch {}
   return true;
 }
+// sign-out keeps the public list; only personal data is dropped
 function lock() {
   setToken(null); mine = EMPTY(); friends = {}; marksLoaded = false; pickerOpen = false;
-  calls = []; loaded = false; updatedAt = null;
-  $("list").innerHTML = ""; $("count").textContent = "";
-  renderMe(); render();
+  state.saved = false; state.hideDone = false;
+  syncControls(); renderMe(); render();
 }
 function signOut() {
   lock();
@@ -59,13 +59,13 @@ async function api(method, body) {
   return authed("/api/marks", { method, headers: body ? { "Content-Type": "application/json" } : {}, body: body ? JSON.stringify(body) : undefined });
 }
 async function loadCalls() {
-  if (!token) return;
   try {
-    const d = await authed("/api/calls");
+    const r = await fetch("/api/calls", { cache: "no-store" });
+    if (!r.ok) throw new Error("failed");
+    const d = await r.json();
     calls = d.calls || []; updatedAt = d.updatedAt; loaded = true; showScan(); render();
-  } catch (e) {
-    if (e.message === "forbidden") { lock(); gateNotice("החשבון הזה עוד לא ברשימת החברים של הלוח. בקש מיובל להוסיף אותך."); return; }
-    if (e.message !== "expired") $("list").innerHTML = `<div class="empty"><strong>לא הצלחתי לטעון את הרשימה</strong><span>רענן את העמוד בעוד רגע.</span></div>`;
+  } catch {
+    $("list").innerHTML = `<div class="empty"><strong>לא הצלחתי לטעון את הרשימה</strong><span>רענן את העמוד בעוד רגע.</span></div>`;
   }
 }
 function gateNotice(msg) { $("gateNotice").innerHTML = msg ? `<div class="notice">${esc(msg)}</div>` : ""; }
@@ -82,7 +82,8 @@ async function loadMarks() {
 }
 function renderMe() {
   const signedIn = !!token;
-  $("gate").hidden = signedIn; $("app").hidden = !signedIn; $("scan").hidden = !signedIn;
+  $("gate").hidden = signedIn;
+  $("lSaved").hidden = !signedIn; $("lHideDone").hidden = !signedIn;
   if (signedIn) gateNotice("");
   $("me").innerHTML = signedIn
     ? `${profile.picture ? `<img src="${esc(profile.picture)}" alt="" referrerpolicy="no-referrer">` : ""}<span>${esc(profile.name)}</span><button class="linkbtn" id="signout">התנתק</button>`
@@ -97,11 +98,11 @@ async function initAuth() {
   await waitGsi();
   google.accounts.id.initialize({
     client_id: cfg.googleClientId,
-    callback: (resp) => { if (setToken(resp.credential)) { renderMe(); loadCalls(); loadMarks(); } },
+    callback: (resp) => { if (setToken(resp.credential)) { renderMe(); render(); loadMarks(); } },
     auto_select: true,
     use_fedcm_for_prompt: true,
   });
-  google.accounts.id.renderButton($("gbtn"), { theme: "filled_black", size: "large", text: "signin_with", locale: "he", shape: "rectangular", width: 264 });
+  google.accounts.id.renderButton($("gbtn"), { theme: "filled_black", size: "large", text: "signin_with", locale: "he", shape: "rectangular", width: 240 });
   $("gbtnWrap").classList.remove("loading");
   if (!token) google.accounts.id.prompt(); // returning friends get signed in silently
 }
@@ -159,7 +160,7 @@ function filtered() {
 function renderPicker() {
   $("topics").hidden = !(token && pickerOpen);
   $("lMatch").hidden = !hasInterests();
-  $("editTopics").hidden = !marksLoaded;
+  $("editTopics").hidden = !(token && marksLoaded);
   $("editTopics").textContent = hasInterests() ? "התחומים שלי (" + mine.interests.length + ")" : "בחר תחומים";
   if (!pickerOpen) return;
   $("topicChips").innerHTML = Object.entries(TOPICS).map(([k, v]) => `<button data-t="${k}" aria-pressed="${picked.has(k)}">${esc(v)}</button>`).join("");
@@ -192,7 +193,7 @@ function render() {
   $("nOpen").textContent = loaded ? openCalls().length : "";
   $("nRec").textContent = loaded ? calls.filter((c) => c.status === "recurring").length : "";
   $("fDeadline").disabled = state.tab !== "open";
-  if (!loaded || !token) return;
+  if (!loaded) return;
   const list = filtered();
   $("count").textContent = list.length ? `${list.length} קולות קוראים` : "";
   if (!list.length) {
@@ -284,5 +285,6 @@ function showScan() {
 syncControls();
 { let stored = null; try { stored = localStorage.getItem(TOKEN_KEY); } catch {} setToken(stored); }
 renderMe();
-if (token) { loadCalls(); loadMarks(); }
+loadCalls();
+if (token) loadMarks();
 initAuth();

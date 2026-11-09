@@ -1,8 +1,7 @@
 {
   "functions": {
-    "api/calls.js": { "includeFiles": "data/**" }
-  },
-  "redirects": [
-    { "source": "/data/:path*", "destination": "/", "permanent": false }
-  ]
+    "api/calls.js": {
+      "includeFiles": "data/**"
+    }
+  }
 }

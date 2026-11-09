@@ -1,6 +1,6 @@
 # קורא · אתר לקולות קוראים
 
-A board of art and photography open calls for friends, refreshed every morning. The list is shown only after Google sign-in.
+A board of art and photography open calls for friends, refreshed every morning. Anyone can browse the list; Google sign-in adds marks and topic matching.
 Static page + two Vercel serverless functions. Sign-in is Google only; each
 person's "saved" / "submitted" marks are a small JSON file in Vercel Blob.
 
@@ -8,7 +8,7 @@ person's "saved" / "submitted" marks are a small JSON file in Vercel Blob.
 - `index.html`, `app.js` — the page (filters, sign-in, marks)
 - `data/calls.json` — the list of open calls; the daily scan commits changes here and Vercel redeploys
 - `api/config.js` — hands the page the Google client ID
-- `api/calls.js` — serves `data/calls.json` to signed-in people only (`/data/*` is redirected away)
+- `api/calls.js` — serves `data/calls.json` (public)
 - `api/marks.js` — reads/writes marks and topic interests; verifies the Google ID token on every call
 - `lib/auth.js` — Google ID token verification (+ optional allow list)
 
