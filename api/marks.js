@@ -3,7 +3,8 @@ import { list, put } from "@vercel/blob";
 import { requireUser } from "../lib/auth.js";
 
 // Each person's marks live in one small JSON file in Vercel Blob:
-// marks/<hash of Google user id>.json = { name, submitted: {callId: date}, saved: {callId: date} }
+// marks/<hash of Google user id>.json = { name, submitted: {callId: date}, saved: {callId: date}, interests: [topic], onboarded }
+const TOPICS = ["photo", "video", "sound", "painting", "sculpture", "newmedia", "performance", "public", "social", "text"];
 const keyFor = (sub) => "marks/" + createHash("sha256").update(sub).digest("hex").slice(0, 32) + ".json";
 
 async function readAll() {
@@ -25,9 +26,9 @@ async function readAll() {
 
 function shape(all, myKey) {
   const friends = {};
-  let mine = { submitted: {}, saved: {} };
+  let mine = { submitted: {}, saved: {}, interests: [], onboarded: false };
   for (const { pathname, data } of all) {
-    if (pathname === myKey) mine = { submitted: data.submitted || {}, saved: data.saved || {} };
+    if (pathname === myKey) mine = { submitted: data.submitted || {}, saved: data.saved || {}, interests: data.interests || [], onboarded: !!data.onboarded };
     for (const id of Object.keys(data.submitted || {})) (friends[id] ||= []).push(data.name || "חבר");
   }
   return { mine, friends };
@@ -45,15 +46,30 @@ export default async function handler(req, res) {
       return res.status(200).json(shape(await readAll(), myKey));
     }
     if (req.method === "POST") {
-      const { callId, kind, on } = req.body || {};
-      if (typeof callId !== "string" || !/^[a-z0-9-]{1,80}$/.test(callId) || !["submitted", "saved"].includes(kind)) {
-        return res.status(400).json({ error: "bad request" });
-      }
+      const { callId, kind, on, interests } = req.body || {};
       const all = await readAll();
       const current = all.find((d) => d.pathname === myKey)?.data || {};
-      const doc = { name: user.name, submitted: { ...(current.submitted || {}) }, saved: { ...(current.saved || {}) } };
-      if (on) doc[kind][callId] = new Date().toISOString().slice(0, 10);
-      else delete doc[kind][callId];
+      const doc = {
+        name: user.name,
+        submitted: { ...(current.submitted || {}) },
+        saved: { ...(current.saved || {}) },
+        interests: current.interests || [],
+        onboarded: !!current.onboarded,
+      };
+      if (interests !== undefined) {
+        // topic picker: saving or skipping both count as "seen it"
+        if (!Array.isArray(interests) || interests.length > 20 || !interests.every((t) => TOPICS.includes(t))) {
+          return res.status(400).json({ error: "bad request" });
+        }
+        doc.interests = [...new Set(interests)];
+        doc.onboarded = true;
+      } else {
+        if (typeof callId !== "string" || !/^[a-z0-9-]{1,80}$/.test(callId) || !["submitted", "saved"].includes(kind)) {
+          return res.status(400).json({ error: "bad request" });
+        }
+        if (on) doc[kind][callId] = new Date().toISOString().slice(0, 10);
+        else delete doc[kind][callId];
+      }
       await put(myKey, JSON.stringify(doc), {
         access: "public",
         addRandomSuffix: false,

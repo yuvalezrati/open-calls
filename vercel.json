@@ -1,5 +1,8 @@
 {
-  "headers": [
-    { "source": "/data/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] }
+  "functions": {
+    "api/calls.js": { "includeFiles": "data/**" }
+  },
+  "redirects": [
+    { "source": "/data/:path*", "destination": "/", "permanent": false }
   ]
 }
