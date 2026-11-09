@@ -107,11 +107,11 @@ async function initAuth() {
 }
 
 /* ---------- list ---------- */
-function pill(c) {
-  if (!c.deadline) return `<span class="pill p-roll">שוטף</span>`;
+const MON = ["ינו׳", "פבר׳", "מרץ", "אפר׳", "מאי", "יוני", "יולי", "אוג׳", "ספט׳", "אוק׳", "נוב׳", "דצמ׳"];
+function left(c) {
   const d = days(c.deadline);
-  const cls = d <= 7 ? "p-soon" : d <= 30 ? "p-mid" : "p-far";
-  return `<span class="pill ${cls}">${d === 0 ? "היום" : d === 1 ? "מחר" : "עוד " + d + " ימים"}</span>`;
+  const cls = d <= 7 ? "l-soon" : d <= 30 ? "l-mid" : "l-far";
+  return `<span class="left ${cls}">${d === 0 ? "נסגר היום" : d === 1 ? "נסגר מחר" : "עוד " + d + " ימים"}</span>`;
 }
 // new calls from the daily scan may arrive without topics: guess them from the text, else "open to all"
 const KW = { photo: /צילום|צלם|photo/i, video: /וידאו|קולנוע|סרט|video|film|moving image/i, sound: /סאונד|קול|sound|audio/i,
@@ -194,41 +194,47 @@ function render() {
   $("fDeadline").disabled = state.tab !== "open";
   if (!loaded || !token) return;
   const list = filtered();
-  $("count").textContent = list.length ? `${list.length} תוצאות` : "";
+  $("count").textContent = list.length ? `${list.length} קולות קוראים` : "";
   if (!list.length) {
     $("list").innerHTML = `<div class="empty"><strong>אין תוצאות לסינון הזה</strong><span>${hasInterests() && state.match ? "נסה לבטל את ״רק מה שמתאים לתחומים שלי״ או להרחיב את טווח הדדליין." : "נסה להרחיב את טווח הדדליין או לנקות את הסינון."}</span></div>`;
     return;
   }
   const weekAgo = ymd(new Date(today() - 7 * 864e5));
   const myName = profile?.name;
-  $("list").innerHTML = `<div class="strip">${list.map((c, i) => {
+  $("list").innerHTML = list.map((c) => {
     const done = !!mine.submitted[c.id], saved = !!mine.saved[c.id];
     const others = (friends[c.id] || []).filter((n) => !(done && n === myName));
     const hits = hasInterests() ? topicsOf(c).filter((t) => mine.interests.includes(t)) : [];
-    const tags = hits.map((t) => `<span class="tag match">${esc(TOPICS[t])}</span>`).join("") + [TYPE_HE[c.type] || "", (REGION_HE[c.region] || "") + (c.place ? " · " + c.place : "")]
-      .filter(Boolean).map((t) => `<span class="tag">${esc(t)}</span>`).join("")
-      + (c.fee === "free" ? `<span class="tag free">בלי דמי הגשה</span>` : c.fee === "paid" ? `<span class="tag">${esc(c.feeNote || "בתשלום")}</span>` : "")
-      + (c.addedAt && c.addedAt >= weekAgo && c.status !== "recurring" ? `<span class="tag new">חדש</span>` : "")
-      + (c.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("");
-    const when = c.status === "recurring"
-      ? `<span class="date">${esc(c.lastDeadline || "—")}</span><span class="pill p-roll">נסגר לאחרונה</span>`
-      : `<span class="date">${c.deadline ? fmt(c.deadline) : "ללא תאריך"}</span>${done ? `<span class="pill p-far">✓ הוגש</span>` : pill(c)}`;
+    const meta = [
+      `<span>${esc(TYPE_HE[c.type] || "")}</span>`,
+      `<span>${esc((REGION_HE[c.region] || "") + (c.place ? ", " + c.place : ""))}</span>`,
+      ...hits.map((t) => `<span class="match">${esc(TOPICS[t])}</span>`),
+      c.addedAt && c.addedAt >= weekAgo && c.status !== "recurring" ? `<span class="new">חדש</span>` : "",
+      c.verified === false ? `<span class="check-me">לוודא</span>` : "",
+    ].join("");
+    const tags = (c.fee === "free" ? `<span class="tag free">בלי דמי הגשה</span>` : c.fee === "paid" ? `<span class="tag">${esc(c.feeNote || "בתשלום")}</span>` : "")
+      + (c.tags || []).filter((t) => t !== "שוטף").map((t) => `<span class="tag">${esc(t)}</span>`).join("");
+    let when;
+    if (c.status === "recurring") when = `<span class="roll">${esc(c.lastDeadline || "שנתי")}</span><span class="mon">נסגר לאחרונה</span>`;
+    else if (!c.deadline) when = `<span class="roll">שוטף</span><span class="mon">בלי דדליין</span>`;
+    else { const [y, m, d] = c.deadline.split("-"); when = `<span class="day">${+d}</span><span class="mon">${MON[+m - 1]} ${y.slice(2)}</span>${done ? `<span class="left l-done">✓ הוגש</span>` : left(c)}`; }
     const acts = token ? `<div class="acts">
-        <button class="star" data-kind="saved" data-id="${esc(c.id)}" aria-pressed="${saved}">${saved ? "★ שמור" : "☆ שמור"}</button>
         ${c.status !== "recurring" ? `<button data-kind="submitted" data-id="${esc(c.id)}" aria-pressed="${done}">${done ? "✓ הגשתי" : "הגשתי"}</button>` : ""}
+        <button class="star" data-kind="saved" data-id="${esc(c.id)}" aria-pressed="${saved}">${saved ? "★ שמור" : "☆ שמור"}</button>
       </div>` : "";
-    return `<article class="frame${done ? " is-done" : ""}">
-      <div class="fno">${String(i + 1).padStart(2, "0")}A</div>
+    return `<article class="call${done ? " is-done" : ""}">
+      <div class="when">${when}</div>
       <div class="body">
+        <div class="meta">${meta}</div>
         <h3 class="title"><a href="${esc(safeUrl(c.url))}" target="_blank" rel="noopener">${esc(c.title)}</a></h3>
         <span class="org">${esc(c.org)}</span>
         ${c.desc ? `<p class="desc">${esc(c.desc)}</p>` : ""}
-        <div class="tags">${tags}</div>
+        ${tags ? `<div class="tags">${tags}</div>` : ""}
         ${others.length ? `<span class="friends">הגישו: ${others.map(esc).join(", ")}</span>` : ""}
       </div>
-      <div class="when">${when}${c.verified === false ? `<span class="pill p-check">לוודא</span>` : ""}${acts}</div>
+      ${acts}
     </article>`;
-  }).join("")}</div>`;
+  }).join("");
 }
 function notice(msg) { $("notice").innerHTML = msg ? `<div class="notice">${esc(msg)}</div>` : ""; }
 

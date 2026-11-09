@@ -3,147 +3,180 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>לוח קולות קוראים</title>
-<meta name="description" content="קולות קוראים לאמנות חזותית וצילום, בארץ ובעולם. מתעדכן כל בוקר.">
+<title>קורא · אתר לקולות קוראים</title>
+<meta name="description" content="קורא: קולות קוראים לאמנות חזותית וצילום, בארץ ובעולם. מתעדכן כל בוקר.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1a17'/%3E%3Ctext x='32' y='46' font-family='serif' font-size='40' text-anchor='middle' fill='%23f3efe6'%3E%D7%A7%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bellefair&family=Frank+Ruhl+Libre:wght@400;500;700&family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
-/* Layout: a contact sheet. Filter bar on top, each open call is a numbered frame on one strip */
+/* קורא: a quiet catalogue. Warm paper, one ink, one oxide-red accent; the deadline date anchors every entry */
 :root{
-  --paper:#f2f3f1; --sheet:#ffffff; --ink:#18191a; --muted:#5d6461; --line:#d9dcd8;
-  --safelight:#a8540f; --safelight-soft:#f6e7d6;
-  --ok:#2f6b45; --ok-soft:#e1efe5; --warn:#8a5a00; --warn-soft:#f7ecd2; --late:#9b2c22; --late-soft:#f6dfdc;
+  --paper:#f3efe6; --sheet:#fbf9f4; --ink:#1c1a17; --ink-2:#3d3a34; --muted:#7a746a; --line:#e2dcd0; --line-2:#cfc7b8;
+  --accent:#a8401c; --accent-soft:#f2e0d4;
+  --ok:#3e6b4a; --ok-soft:#e3ece2; --warn:#8c6418; --warn-soft:#f3e8cf; --late:#a8401c; --late-soft:#f4dfd5;
+  --f-word:"Bellefair","Frank Ruhl Libre",serif;
   --f-display:"Frank Ruhl Libre","Times New Roman",serif;
   --f-body:"IBM Plex Sans Hebrew",Arial,sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --r:6px;
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root{
-  --paper:#121413; --sheet:#1b1e1d; --ink:#ebedea; --muted:#9aa29e; --line:#2e3331;
-  --safelight:#e08a3c; --safelight-soft:#3a2716;
-  --ok:#7fc79a; --ok-soft:#1d3226; --warn:#e5b45a; --warn-soft:#3a2f17; --late:#ef8a7f; --late-soft:#3d1f1c;
+  --paper:#151412; --sheet:#1c1b18; --ink:#efeae0; --ink-2:#d6d0c4; --muted:#968f83; --line:#2c2a25; --line-2:#3a372f;
+  --accent:#e2895f; --accent-soft:#3a241a;
+  --ok:#8cc29a; --ok-soft:#1e2c22; --warn:#e2b765; --warn-soft:#352b16; --late:#ec9a75; --late-soft:#3b2219;
   color-scheme:dark}}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-#notice:empty{display:none}
+#notice:empty,#gateNotice:empty{display:none}
 html,body{margin:0}
-body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.6}
-main{display:flex;flex-direction:column;gap:24px}
-.wrap{max-width:1040px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:24px}
-header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;border-bottom:2px solid var(--ink);padding-bottom:16px}
-.hgroup{display:flex;flex-direction:column;gap:6px;min-width:0}
-.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;color:var(--safelight)}
-h1{font-family:var(--f-display);font-size:clamp(30px,5vw,44px);line-height:1.1;margin:0;text-wrap:balance}
-.side{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
-.scan{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent-soft)}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding-block:clamp(28px,5vw,56px) 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:32px}
+main{display:flex;flex-direction:column;gap:28px}
+button{font:inherit;color:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* ---- masthead ---- */
+header{display:grid;grid-template-columns:1fr auto;align-items:end;gap:16px 24px;padding-bottom:22px;border-bottom:1px solid var(--ink)}
+.brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;min-width:0}
+.word{font-family:var(--f-word);font-weight:400;font-size:clamp(56px,10vw,96px);line-height:.85;letter-spacing:-.01em;margin:0}
+.tagline{font-family:var(--f-display);font-size:clamp(16px,2vw,19px);color:var(--muted)}
+.side{display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-bottom:6px}
+.scan{font-family:var(--f-mono);font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;letter-spacing:.02em}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--ok)}
 .dot.stale{background:var(--warn)}
-.me{display:flex;align-items:center;gap:8px;font-size:13px}
+.me{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--ink-2)}
 .me img{width:26px;height:26px;border-radius:50%}
-.linkbtn{font:inherit;font-size:13px;background:none;border:0;color:var(--safelight);cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0}
-.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.tabs button{font:inherit;font-size:15px;font-weight:500;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:6px 12px;margin-bottom:-1px;cursor:pointer}
-.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--safelight)}
-.tabs .n{font-family:var(--f-mono);font-size:12px;margin-inline-start:6px}
-.filters{display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:10px;background:var(--sheet);border:1px solid var(--line);padding:14px}
-.filters label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);min-width:0}
-.filters input[type=search],.filters select{font:inherit;font-size:14px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:7px 10px;width:100%}
-.row2{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
-.chips{display:flex;gap:6px;flex-wrap:wrap}
-.chips button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:3px 12px;border-radius:999px;cursor:pointer}
-.chips button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.filters label.check{flex-direction:row;align-items:center;gap:6px;font-size:13px;color:var(--ink);cursor:pointer}
-.check[hidden]{display:none}
-.reset{margin-inline-start:auto}
-button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--safelight);outline-offset:2px}
-.count{font-size:13px;color:var(--muted);margin:0}
-.strip{display:flex;flex-direction:column;background:var(--sheet);border:1px solid var(--line)}
-.frame{display:grid;grid-template-columns:52px minmax(0,1fr) 170px;gap:16px;padding:18px;border-top:1px solid var(--line)}
-.frame:first-child{border-top:0}
-.frame.is-done{opacity:.6}
-.fno{font-family:var(--f-mono);font-size:12px;color:var(--safelight);padding-top:3px}
-.body{min-width:0;display:flex;flex-direction:column;gap:6px}
-.title{font-weight:600;font-size:16px;margin:0}
-.title a{color:var(--ink);text-decoration-color:var(--line);text-underline-offset:3px}
-.title a:hover{text-decoration-color:var(--safelight)}
-.org{color:var(--muted);font-size:13px}
-.desc{margin:0;max-width:66ch}
-.tags{display:flex;gap:6px;flex-wrap:wrap}
-.tag{font-size:12px;border:1px solid var(--line);border-radius:4px;padding:0 7px;color:var(--muted)}
-.tag.free{border-color:var(--ok);color:var(--ok)}
-.tag.new{border-color:var(--safelight);color:var(--safelight)}
-.friends{font-size:12.5px;color:var(--ok)}
-.when{display:flex;flex-direction:column;align-items:flex-end;gap:6px;text-align:end}
-.date{font-family:var(--f-mono);font-size:14px;font-variant-numeric:tabular-nums}
-.pill{font-size:12px;font-weight:500;padding:1px 9px;border-radius:999px;white-space:nowrap}
-.p-soon{background:var(--late-soft);color:var(--late)}
-.p-mid{background:var(--warn-soft);color:var(--warn)}
-.p-far{background:var(--ok-soft);color:var(--ok)}
-.p-roll{background:var(--safelight-soft);color:var(--safelight)}
-.p-check{border:1px dashed var(--warn);color:var(--warn)}
-.acts{display:flex;gap:6px;margin-top:4px;flex-wrap:wrap;justify-content:flex-end}
-.acts button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:4px;padding:2px 9px;cursor:pointer}
-.acts button[aria-pressed="true"]{background:var(--ok-soft);border-color:var(--ok);color:var(--ok)}
-.acts button.star[aria-pressed="true"]{background:var(--safelight-soft);border-color:var(--safelight);color:var(--safelight)}
-.empty{background:var(--sheet);border:1px dashed var(--line);padding:32px 20px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:6px;align-items:center}
-.empty strong{color:var(--ink);font-family:var(--f-display);font-size:19px;font-weight:500}
-.notice{font-size:13px;background:var(--warn-soft);color:var(--warn);padding:8px 12px;border-radius:4px}
-/* Sign-in gate: a sheet of blank, numbered frames with the sign-in in the middle */
-.gate{position:relative;background:var(--sheet);border:1px solid var(--line);overflow:hidden}
-.ghost{display:flex;flex-direction:column}
-.ghost .g{display:grid;grid-template-columns:52px minmax(0,1fr) 120px;gap:16px;padding:18px;border-top:1px solid var(--line)}
-.ghost .g:first-child{border-top:0}
-.ghost .fno{opacity:.55}
-.bar{height:10px;border-radius:2px;background:var(--line);margin-bottom:10px}
-.bar.t{width:42%;height:13px}.bar.s{width:24%}.bar.l{width:78%}.bar.d{width:64px;margin-inline-start:auto}
-.gate-card{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px 16px;background:color-mix(in srgb,var(--sheet) 72%,transparent);backdrop-filter:blur(1.5px)}
-.gate-inner{max-width:420px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;background:var(--sheet);border:1px solid var(--ink);padding:28px 24px;box-shadow:6px 6px 0 var(--safelight-soft)}
-.gate-inner .eyebrow{font-size:11.5px}
-.gate-inner h2{font-family:var(--f-display);font-weight:500;font-size:26px;line-height:1.2;margin:0;text-wrap:balance}
-.gate-inner p{margin:0;color:var(--muted);font-size:14px;text-wrap:pretty}
-.gate-inner .small{font-size:12px}
-.gbtn-wrap{position:relative;width:264px;height:44px}
-.gbtn-face{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:var(--paper);font:inherit;font-weight:500;font-size:15px;border-radius:4px;pointer-events:none;transition:background .15s}
-.gbtn-face .gmark{width:22px;height:22px;border-radius:50%;background:#fff;display:grid;place-items:center}
-.gbtn-wrap:hover .gbtn-face{background:var(--safelight)}
-.gbtn-wrap:focus-within .gbtn-face{outline:2px solid var(--safelight);outline-offset:2px}
+.linkbtn{font-size:13px;background:none;border:0;color:var(--muted);cursor:pointer;padding:0;text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:4px}
+.linkbtn:hover{color:var(--accent);text-decoration-color:currentColor}
+
+/* ---- sign-in gate ---- */
+.gate{position:relative;min-height:520px;display:grid;place-items:center;padding:32px 0;overflow:hidden}
+.ghost{position:absolute;inset:0;display:flex;flex-direction:column;opacity:.55;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 0%,transparent 95%);mask-image:linear-gradient(to bottom,#000 0%,transparent 95%)}
+.ghost .g{display:grid;grid-template-columns:84px minmax(0,1fr);gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
+.ghost .gd{font-family:var(--f-display);font-size:38px;line-height:1;color:var(--line-2)}
+.bar{height:9px;border-radius:9px;background:var(--line);margin-bottom:12px}
+.bar.t{width:46%;height:14px}.bar.s{width:22%}.bar.l{width:74%}
+.gate-card{position:relative;max-width:440px;width:100%;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;background:var(--sheet);border:1px solid var(--line);border-radius:14px;padding:40px 32px 32px;box-shadow:0 1px 0 var(--line),0 24px 60px -24px rgb(40 30 15 / .25)}
+.gate-card .seal{font-family:var(--f-word);font-size:64px;line-height:.8;margin:0}
+.gate-card h2{font-family:var(--f-display);font-weight:500;font-size:24px;line-height:1.25;margin:0;text-wrap:balance}
+.gate-card p{margin:0;color:var(--muted);font-size:14.5px;text-wrap:pretty}
+.gate-card .small{font-size:12.5px}
+.rule{width:36px;height:1px;background:var(--accent)}
+.gbtn-wrap{position:relative;width:264px;height:46px;margin-top:4px}
+.gbtn-face{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:12px;background:var(--ink);color:var(--paper);font-weight:500;font-size:15px;border-radius:999px;pointer-events:none;transition:background .2s}
+.gbtn-face .gmark{width:24px;height:24px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.gbtn-wrap:hover .gbtn-face{background:var(--accent)}
+.gbtn-wrap:focus-within .gbtn-face{outline:2px solid var(--accent);outline-offset:3px}
 /* Google's own button sits on top, invisible, so the click goes through Google */
-#gbtn{position:absolute;inset:0;opacity:.01;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.gbtn-wrap.loading .gbtn-face{opacity:.5}
-.gate .notice{max-width:360px}
-/* Topic picker: optional, sits above the filters, can be skipped */
-.topics{background:var(--sheet);border:1px solid var(--line);border-inline-start:3px solid var(--safelight);padding:16px 18px;display:flex;flex-direction:column;gap:12px}
-.topics h2{font-family:var(--f-display);font-weight:500;font-size:20px;margin:0}
-.topics p{margin:0;color:var(--muted);font-size:13.5px}
-.topics .chips button{font-size:14px;padding:5px 14px}
-.topics .acts-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-.btn{font:inherit;font-size:14px;font-weight:500;background:var(--ink);color:var(--paper);border:0;border-radius:4px;padding:7px 16px;cursor:pointer}
-.btn:hover{background:var(--safelight)}
-.btn:disabled{opacity:.4;cursor:default;background:var(--ink)}
-.tag.match{border-color:var(--safelight);color:var(--safelight);background:var(--safelight-soft)}
-footer{color:var(--muted);font-size:12.5px;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+#gbtn{position:absolute;inset:0;opacity:.01;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:999px}
+.gbtn-wrap.loading .gbtn-face{opacity:.45}
+
+/* ---- topic picker ---- */
+.topics{background:var(--sheet);border:1px solid var(--line);border-radius:14px;padding:24px 26px;display:flex;flex-direction:column;gap:14px}
+.topics .head{display:flex;justify-content:space-between;align-items:baseline;gap:4px 12px;flex-wrap:wrap}
+.topics h2{font-family:var(--f-display);font-weight:500;font-size:22px;margin:0}
+.topics p{margin:0;color:var(--muted);font-size:14px}
+.topics .acts-row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:4px}
+.btn{font-size:14px;font-weight:500;background:var(--ink);color:var(--paper);border:0;border-radius:999px;padding:8px 20px;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--accent)}
+.btn:disabled{opacity:.35;cursor:default;background:var(--ink)}
+
+/* ---- chips (region + topics) ---- */
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chips button{font-size:13.5px;border:1px solid var(--line-2);background:transparent;color:var(--ink-2);padding:4px 14px;border-radius:999px;cursor:pointer;transition:border-color .15s,background .15s}
+.chips button:hover{border-color:var(--ink-2)}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.topics .chips button{font-size:14.5px;padding:6px 16px}
+
+/* ---- tabs + filters ---- */
+.controls{display:flex;flex-direction:column;gap:18px}
+.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line)}
+.tabs button{font-family:var(--f-display);font-size:19px;background:none;border:0;border-bottom:1px solid transparent;color:var(--muted);padding:0 0 10px;margin-bottom:-1px;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+.tabs .n{font-family:var(--f-mono);font-size:11.5px;margin-inline-start:7px;vertical-align:3px;color:var(--muted)}
+.filters{display:grid;grid-template-columns:minmax(0,2.2fr) repeat(3,minmax(0,1fr));gap:12px 20px;align-items:end}
+.filters label{display:flex;flex-direction:column;gap:2px;font-size:11.5px;color:var(--muted);letter-spacing:.02em;min-width:0}
+.filters input[type=search],.filters select{font:inherit;font-size:15px;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line-2);border-radius:0;padding:6px 0;width:100%;-webkit-appearance:none;appearance:none}
+.filters select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23857e72' stroke-width='1.3'/%3E%3C/svg%3E");background-position:left 2px center;background-size:10px 6px;background-repeat:no-repeat;padding-left:20px;cursor:pointer}
+.filters input[type=search]:focus,.filters select:focus{outline:0;border-bottom-color:var(--ink)}
+.filters select:disabled{opacity:.4}
+.row2{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;padding-top:4px}
+.filters label.check{display:flex;flex-direction:row;align-items:center;gap:7px;font-size:13.5px;letter-spacing:0;color:var(--ink-2);cursor:pointer}
+.check input{accent-color:var(--ink);width:15px;height:15px;margin:0}
+.row2 .end{margin-inline-start:auto;display:flex;gap:18px}
+
+/* ---- list ---- */
+.listhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:-14px}
+.count{font-family:var(--f-mono);font-size:12px;color:var(--muted);margin:0;letter-spacing:.02em}
+.list{display:flex;flex-direction:column;border-top:1px solid var(--ink)}
+.call{display:grid;grid-template-columns:88px minmax(0,1fr) auto;gap:8px 32px;padding:28px 0 26px;border-bottom:1px solid var(--line)}
+.call.is-done{opacity:.5}
+.call .when{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.call .day{font-family:var(--f-display);font-size:44px;line-height:.9;font-variant-numeric:lining-nums}
+.call .mon{font-family:var(--f-mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.call .roll{font-family:var(--f-display);font-size:20px;line-height:1.1;color:var(--muted)}
+.left{font-size:12px;font-weight:500;padding:1px 9px;border-radius:999px;white-space:nowrap;margin-top:2px}
+.l-soon{background:var(--late-soft);color:var(--late)}
+.l-mid{background:var(--warn-soft);color:var(--warn)}
+.l-far{color:var(--muted);padding-inline:0}
+.l-done{background:var(--ok-soft);color:var(--ok)}
+.body{min-width:0;display:flex;flex-direction:column;gap:6px}
+.meta{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 0;align-items:center}
+.meta span+span::before{content:"·";margin-inline:8px;color:var(--line-2)}
+.meta .match{color:var(--accent);font-weight:500}
+.meta .new{color:var(--accent)}
+.meta .check-me{color:var(--warn)}
+.title{font-family:var(--f-display);font-weight:500;font-size:21px;line-height:1.3;margin:0;text-wrap:balance}
+.title a{text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-size:0 1px;background-position:100% 100%;background-repeat:no-repeat;transition:background-size .25s}
+.title a:hover{background-size:100% 1px}
+.title a::after{content:" ↖";font-size:.7em;color:var(--muted)}
+.org{color:var(--ink-2);font-size:13.5px}
+.desc{margin:4px 0 0;max-width:62ch;color:var(--ink-2)}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.tag{font-size:12px;border-radius:999px;padding:1px 10px;background:var(--paper);border:1px solid var(--line);color:var(--muted)}
+.tag.free{border-color:transparent;background:var(--ok-soft);color:var(--ok)}
+.friends{font-size:13px;color:var(--ok);margin-top:4px}
+.acts{display:flex;flex-direction:column;gap:8px;align-items:stretch;min-width:92px}
+.acts button{font-size:13px;border:1px solid var(--line-2);background:transparent;color:var(--ink-2);border-radius:999px;padding:4px 12px;cursor:pointer;white-space:nowrap;transition:border-color .15s,background .15s}
+.acts button:hover{border-color:var(--ink-2)}
+.acts button[aria-pressed="true"]{background:var(--ok-soft);border-color:transparent;color:var(--ok)}
+.acts button.star[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent)}
+.empty{padding:56px 20px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:6px;align-items:center;border-bottom:1px solid var(--line)}
+.empty strong{color:var(--ink);font-family:var(--f-display);font-size:21px;font-weight:500}
+.notice{font-size:13.5px;background:var(--warn-soft);color:var(--warn);padding:10px 14px;border-radius:var(--r)}
+
+footer{color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-top:20px;border-top:1px solid var(--line)}
+footer .sig{font-family:var(--f-word);font-size:22px;color:var(--ink-2);line-height:1}
+footer p{margin:0;max-width:68ch}
+
 @media (max-width:760px){
   .filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .filters label.search{grid-column:1/-1}
+  .call{grid-template-columns:64px minmax(0,1fr);gap:8px 18px}
+  .call .day{font-size:36px}
+  .acts{grid-column:2;flex-direction:row;min-width:0;margin-top:6px}
 }
-@media (max-width:600px){
-  .ghost .g{grid-template-columns:34px minmax(0,1fr);gap:10px 12px}
-  .ghost .g .bar.d{display:none}
-  .frame{grid-template-columns:34px minmax(0,1fr);gap:10px 12px}
-  .when{grid-column:2;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;text-align:start}
-  .acts{justify-content:flex-start}
-  .side{align-items:flex-start}
-  .reset{margin-inline-start:0}
+@media (max-width:520px){
+  header{grid-template-columns:1fr}
+  .side{align-items:flex-start;padding-bottom:0}
+  .row2 .end{margin-inline-start:0}
+  .topics{padding:20px}
+  .gate-card{padding:32px 22px 26px}
 }
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="hgroup">
-      <span class="eyebrow">צילום · אמנות חזותית · בארץ ובעולם</span>
-      <h1>לוח קולות קוראים</h1>
+    <div class="brand">
+      <h1 class="word">קורא</h1>
+      <span class="tagline">אתר לקולות קוראים</span>
     </div>
     <div class="side">
       <div class="scan" id="scan" hidden><span class="dot stale" id="scanDot"></span><span id="scanText">טוען…</span></div>
@@ -153,102 +186,108 @@ footer{color:var(--muted);font-size:12.5px;display:flex;flex-direction:column;ga
 
   <section class="gate" id="gate" hidden aria-labelledby="gateTitle">
     <div class="ghost" aria-hidden="true">
-      <div class="g"><span class="fno">01A</span><div><div class="bar t"></div><div class="bar s"></div><div class="bar l"></div></div><div><div class="bar d"></div></div></div>
-      <div class="g"><span class="fno">02A</span><div><div class="bar t"></div><div class="bar s"></div><div class="bar l"></div></div><div><div class="bar d"></div></div></div>
-      <div class="g"><span class="fno">03A</span><div><div class="bar t"></div><div class="bar s"></div><div class="bar l"></div></div><div><div class="bar d"></div></div></div>
-      <div class="g"><span class="fno">04A</span><div><div class="bar t"></div><div class="bar s"></div><div class="bar l"></div></div><div><div class="bar d"></div></div></div>
-      <div class="g"><span class="fno">05A</span><div><div class="bar t"></div><div class="bar s"></div><div class="bar l"></div></div><div><div class="bar d"></div></div></div>
+      <div class="g"><span class="gd">12</span><div><div class="bar s"></div><div class="bar t"></div><div class="bar l"></div></div></div>
+      <div class="g"><span class="gd">18</span><div><div class="bar s"></div><div class="bar t"></div><div class="bar l"></div></div></div>
+      <div class="g"><span class="gd">23</span><div><div class="bar s"></div><div class="bar t"></div><div class="bar l"></div></div></div>
+      <div class="g"><span class="gd">06</span><div><div class="bar s"></div><div class="bar t"></div><div class="bar l"></div></div></div>
+      <div class="g"><span class="gd">15</span><div><div class="bar s"></div><div class="bar t"></div><div class="bar l"></div></div></div>
     </div>
     <div class="gate-card">
-      <div class="gate-inner">
-        <span class="eyebrow">לחברים בלבד</span>
-        <h2 id="gateTitle">הלוח נפתח אחרי התחברות</h2>
-        <p>קולות קוראים פתוחים בארץ ובעולם, מתעדכן כל בוקר. אחרי הכניסה אפשר לסמן מה שמרת ומה הגשת, ולראות מי מהחברים כבר הגיש.</p>
-        <div class="gbtn-wrap loading" id="gbtnWrap">
-          <div class="gbtn-face" aria-hidden="true">
-            <span class="gmark"><svg width="14" height="14" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
-            <span>כניסה עם Google</span>
-          </div>
-          <div id="gbtn"></div>
+      <p class="seal" aria-hidden="true">ק</p>
+      <h2 id="gateTitle">קולות קוראים לאמנות וצילום, בארץ ובעולם</h2>
+      <span class="rule" aria-hidden="true"></span>
+      <p>מתעדכן כל בוקר. אחרי הכניסה אפשר לבחור תחומים, לסמן מה שמרת ומה הגשת, ולראות מי מהחברים כבר הגיש.</p>
+      <div class="gbtn-wrap loading" id="gbtnWrap">
+        <div class="gbtn-face" aria-hidden="true">
+          <span class="gmark"><svg width="14" height="14" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
+          <span>כניסה עם Google</span>
         </div>
-        <div id="gateNotice"></div>
-        <p class="small">שומרים רק שם פרטי ומה שסימנת. <a href="/privacy.html" style="color:inherit">פרטיות</a></p>
+        <div id="gbtn"></div>
       </div>
+      <div id="gateNotice"></div>
+      <p class="small">שומרים רק שם פרטי ומה שסימנת. <a href="/privacy.html">פרטיות</a></p>
     </div>
   </section>
 
   <main id="app" hidden>
-  <section class="topics" id="topics" hidden aria-labelledby="topicsTitle">
-    <h2 id="topicsTitle">מה מעניין אותך?</h2>
-    <p>בחר תחומים ונציג קודם את מה שמתאים לך. אפשר לדלג ולשנות בכל רגע.</p>
-    <div class="chips" id="topicChips" role="group" aria-label="תחומים"></div>
-    <div class="acts-row">
-      <button class="btn" id="topicsSave" disabled>שמור</button>
-      <button class="linkbtn" id="topicsSkip">דלג, תראה לי הכול</button>
-    </div>
-  </section>
-
-  <div class="tabs" role="tablist" aria-label="תצוגה">
-    <button role="tab" id="tab-open" aria-selected="true" data-tab="open">פתוח עכשיו<span class="n" id="nOpen"></span></button>
-    <button role="tab" id="tab-rec" aria-selected="false" data-tab="recurring">חוזרים כל שנה<span class="n" id="nRec"></span></button>
-  </div>
-
-  <div class="filters">
-    <label class="search">חיפוש
-      <input type="search" id="q" placeholder="שם, מוסד, נושא…">
-    </label>
-    <label>דדליין
-      <select id="fDeadline">
-        <option value="all">הכול</option>
-        <option value="7">בשבוע הקרוב</option>
-        <option value="30">בחודש הקרוב</option>
-        <option value="90">ב־3 חודשים</option>
-        <option value="later">יותר מ־3 חודשים</option>
-        <option value="none">שוטף / בלי תאריך</option>
-      </select>
-    </label>
-    <label>סוג
-      <select id="fType">
-        <option value="all">כל הסוגים</option>
-        <option value="exhibition">תערוכה</option>
-        <option value="residency">רזידנסי</option>
-        <option value="grant">מענק</option>
-        <option value="prize">פרס</option>
-        <option value="festival">פסטיבל</option>
-        <option value="publication">פרסום</option>
-        <option value="other">אחר</option>
-      </select>
-    </label>
-    <label>מיון
-      <select id="fSort">
-        <option value="deadline">לפי דדליין</option>
-        <option value="added">חדשים קודם</option>
-      </select>
-    </label>
-    <div class="row2">
-      <div class="chips" role="group" aria-label="מיקום">
-        <button data-r="all" aria-pressed="true">הכול</button>
-        <button data-r="il" aria-pressed="false">בארץ</button>
-        <button data-r="abroad" aria-pressed="false">חו״ל</button>
-        <button data-r="online" aria-pressed="false">אונליין</button>
+    <section class="topics" id="topics" hidden aria-labelledby="topicsTitle">
+      <div class="head">
+        <h2 id="topicsTitle">מה מעניין אותך?</h2>
+        <p>לא חובה. אפשר לשנות בכל רגע.</p>
       </div>
-      <label class="check"><input type="checkbox" id="fFree"> בלי דמי הגשה</label>
-      <label class="check" id="lHideDone"><input type="checkbox" id="fHideDone"> הסתר מה שהגשתי</label>
-      <label class="check" id="lSaved"><input type="checkbox" id="fSaved"> רק שמורים</label>
-      <label class="check" id="lMatch" hidden><input type="checkbox" id="fMatch"> רק מה שמתאים לתחומים שלי</label>
-      <button class="linkbtn" id="editTopics">התחומים שלי</button>
-      <button class="linkbtn reset" id="reset">נקה סינון</button>
-    </div>
-  </div>
+      <p>בחר תחומים ונציג קודם את מה שמתאים לך.</p>
+      <div class="chips" id="topicChips" role="group" aria-label="תחומים"></div>
+      <div class="acts-row">
+        <button class="btn" id="topicsSave" disabled>שמור</button>
+        <button class="linkbtn" id="topicsSkip">דלג, תראה לי הכול</button>
+      </div>
+    </section>
 
-  <p class="count" id="count" aria-live="polite"></p>
-  <div id="notice"></div>
-  <div id="list"><div class="empty"><strong>טוען את הקולות הקוראים</strong></div></div>
+    <div class="controls">
+      <div class="tabs" role="tablist" aria-label="תצוגה">
+        <button role="tab" id="tab-open" aria-selected="true" data-tab="open">פתוח עכשיו<span class="n" id="nOpen"></span></button>
+        <button role="tab" id="tab-rec" aria-selected="false" data-tab="recurring">חוזרים כל שנה<span class="n" id="nRec"></span></button>
+      </div>
+
+      <div class="filters">
+        <label class="search">חיפוש
+          <input type="search" id="q" placeholder="שם, מוסד, נושא…">
+        </label>
+        <label>דדליין
+          <select id="fDeadline">
+            <option value="all">הכול</option>
+            <option value="7">בשבוע הקרוב</option>
+            <option value="30">בחודש הקרוב</option>
+            <option value="90">ב־3 חודשים</option>
+            <option value="later">יותר מ־3 חודשים</option>
+            <option value="none">שוטף / בלי תאריך</option>
+          </select>
+        </label>
+        <label>סוג
+          <select id="fType">
+            <option value="all">כל הסוגים</option>
+            <option value="exhibition">תערוכה</option>
+            <option value="residency">רזידנסי</option>
+            <option value="grant">מענק</option>
+            <option value="prize">פרס</option>
+            <option value="festival">פסטיבל</option>
+            <option value="publication">פרסום</option>
+            <option value="other">אחר</option>
+          </select>
+        </label>
+        <label>מיון
+          <select id="fSort">
+            <option value="deadline">לפי דדליין</option>
+            <option value="added">חדשים קודם</option>
+          </select>
+        </label>
+        <div class="row2">
+          <div class="chips" role="group" aria-label="מיקום">
+            <button data-r="all" aria-pressed="true">הכול</button>
+            <button data-r="il" aria-pressed="false">בארץ</button>
+            <button data-r="abroad" aria-pressed="false">חו״ל</button>
+            <button data-r="online" aria-pressed="false">אונליין</button>
+          </div>
+          <label class="check"><input type="checkbox" id="fFree"> בלי דמי הגשה</label>
+          <label class="check" id="lMatch" hidden><input type="checkbox" id="fMatch"> רק מה שמתאים לי</label>
+          <label class="check" id="lSaved"><input type="checkbox" id="fSaved"> שמורים</label>
+          <label class="check" id="lHideDone"><input type="checkbox" id="fHideDone"> הסתר מה שהגשתי</label>
+          <span class="end">
+            <button class="linkbtn" id="editTopics">התחומים שלי</button>
+            <button class="linkbtn" id="reset">נקה סינון</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="listhead"><p class="count" id="count" aria-live="polite"></p></div>
+    <div id="notice"></div>
+    <div id="list" class="list"><div class="empty"><strong>טוען את הקולות הקוראים</strong></div></div>
   </main>
 
   <footer>
-    <span>הרשימה מתעדכנת כל בוקר מסריקה של ערב רב, איגוד האמנים, פורטפוליו וחיפוש ברשת. קולות קוראים שהדדליין שלהם עבר יורדים מהרשימה מעצמם.</span>
-    <span><a href="/privacy.html" style="color:inherit">פרטיות</a> · “לוודא” מסמן פרט שלא אושר מול המקור. לפני הגשה כדאי לבדוק תנאי סף ודמי הגשה בקישור.</span>
+    <span class="sig">קורא</span>
+    <p>הרשימה מתעדכנת כל בוקר מסריקה של ערב רב, איגוד האמנים, פורטפוליו, הקול קורא וחיפוש ברשת. קולות קוראים שעבר הדדליין שלהם יורדים מעצמם. “לוודא” מסמן פרט שלא אושר מול המקור, אז לפני הגשה כדאי לבדוק בקישור. <a href="/privacy.html">פרטיות</a></p>
   </footer>
 </div>
 <script src="/app.js"></script>

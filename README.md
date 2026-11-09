@@ -1,4 +1,4 @@
-# לוח קולות קוראים
+# קורא · אתר לקולות קוראים
 
 A board of art and photography open calls for friends, refreshed every morning. The list is shown only after Google sign-in.
 Static page + two Vercel serverless functions. Sign-in is Google only; each

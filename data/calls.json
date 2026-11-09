@@ -530,6 +530,351 @@
       "topics": [
         "any"
       ]
+    },
+    {
+      "feeNote": "€50 לעבודה",
+      "tags": [
+        "תערוכה",
+        "קטלוג"
+      ],
+      "verified": true,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "malamegi-lab-venice-2027",
+      "title": "Lab Art Prize, מהדורת ונציה 2027",
+      "org": "Malamegi Lab",
+      "url": "https://artdeadline.com/ops/malamegi/",
+      "deadline": "2026-11-12",
+      "region": "abroad",
+      "place": "ונציה",
+      "type": "prize",
+      "fee": "paid",
+      "desc": "12 פיינליסטים מציגים בתערוכה קבוצתית בוונציה ובקטלוג. פרס רכישה עד €2,000, פרס כספי של €1,000 וספר מונוגרפי. פתוח גם לצילום ווידאו.",
+      "topics": [
+        "photo",
+        "painting",
+        "sculpture",
+        "newmedia",
+        "video"
+      ]
+    },
+    {
+      "feeNote": "",
+      "tags": [
+        "ממומן",
+        "€6,000"
+      ],
+      "verified": true,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "mon-art-nicosia-2027",
+      "title": "MON-ART: רזידנסי במנזר האמנויות, ניקוסיה",
+      "org": "Nicosia Monastery of Arts",
+      "url": "https://cyprus-mail.com/2026/10/27/call-for-artsists-nicosia-monastery-of-arts-residency-programme",
+      "deadline": "2026-11-23",
+      "region": "abroad",
+      "place": "ניקוסיה, קפריסין",
+      "type": "residency",
+      "fee": "unknown",
+      "desc": "שישה חודשים, פברואר–יולי 2027, בעיר העתיקה של ניקוסיה. שני אמנים, €6,000 שכר אמן לכל אחד, לינה משותפת, הפקה ונסיעות מכוסים. דגש על אמנות, קיימות וקהילה.",
+      "topics": [
+        "social",
+        "public",
+        "any"
+      ]
+    },
+    {
+      "feeNote": "דמי תוכנית, יש סיוע כספי",
+      "tags": [
+        "פרפורמנס"
+      ],
+      "verified": true,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "banff-embodied-making-2027",
+      "title": "Embodied Making: מופע, דימויים ואובייקטים",
+      "org": "מרכז בנף לאמנות ויצירתיות",
+      "url": "https://www.banffcentre.ca/programs/visual-arts/visual-arts-embodied-making-performance-art-images-and-objects",
+      "deadline": "2027-02-17",
+      "region": "abroad",
+      "place": "בנף, קנדה",
+      "type": "residency",
+      "fee": "paid",
+      "desc": "רזידנסי קבוצתי, 5 ביולי–6 באוגוסט 2027, על הממשק בין מופע, גוף, דימוי וחומר.",
+      "topics": [
+        "performance",
+        "photo",
+        "sculpture"
+      ]
+    },
+    {
+      "feeNote": "30 פרנק, נתרם לרופאים ללא גבולות",
+      "tags": [
+        "שוטף"
+      ],
+      "verified": true,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "swatch-art-peace-hotel",
+      "title": "רזידנסי Swatch Art Peace Hotel",
+      "org": "Swatch",
+      "url": "https://www.swatch-art-peace-hotel.com/en/apply",
+      "deadline": null,
+      "region": "abroad",
+      "place": "שנגחאי, סין",
+      "type": "residency",
+      "fee": "paid",
+      "desc": "שלושה עד שישה חודשים בדירה וסטודיו במלון על הבונד בשנגחאי. אין דדליין, ההגשה שוטפת והבדיקה לוקחת לפחות 12 שבועות. נהוג להשאיר עבודה במלון.",
+      "topics": [
+        "any"
+      ]
+    },
+    {
+      "feeNote": "",
+      "tags": [
+        "מלגה",
+        "קהילה"
+      ],
+      "verified": false,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "neve-shalom-residency-2027",
+      "title": "רזידנסי אמנים בנווה שלום 2027–2028",
+      "org": "נווה שלום / וואחת אל־סלאם",
+      "url": "https://wasns.org/he/artist-residency-program-call-for-applications-2027-2028",
+      "deadline": "2026-12-06",
+      "region": "il",
+      "place": "נווה שלום",
+      "type": "residency",
+      "fee": "free",
+      "desc": "שלוש תקופות של שלושה חודשים ב־2027–2028, עם בית מרוהט ומלגת עבודה חודשית (במחזור הקודם 2,500 ₪). דורש הצעה, מכתב כוונות ותיק עבודות.",
+      "topics": [
+        "any",
+        "social"
+      ]
+    },
+    {
+      "feeNote": "",
+      "tags": [
+        "יריד"
+      ],
+      "verified": false,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "black-white-red-dot-miami",
+      "title": "Black & White Gallery ב־Red Dot Miami",
+      "org": "The Black and White Gallery",
+      "url": "https://theblackandwhite.gallery/open-call-the-black-white-gallery/",
+      "deadline": "2026-11-10",
+      "region": "abroad",
+      "place": "מיאמי",
+      "type": "exhibition",
+      "fee": "unknown",
+      "desc": "צילום שחור־לבן ופיסול לתערוכה ב־Red Dot Miami בשבוע האמנות של מיאמי, דצמבר 2026, וייצוג בגלריה וב־Artsy.",
+      "topics": [
+        "photo",
+        "sculpture"
+      ]
+    },
+    {
+      "feeNote": "דמי הגשה",
+      "tags": [
+        "1,200$"
+      ],
+      "verified": false,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "artist-grant-nov-2026",
+      "title": "Artist Grant, נובמבר",
+      "org": "Artist Grant",
+      "url": "https://artistgrant.org/apply",
+      "deadline": "2026-11-15",
+      "region": "online",
+      "place": "",
+      "type": "grant",
+      "fee": "paid",
+      "desc": "מענק חופשי של 1,200$ לאמן חזותי אחד, שלוש פעמים בשנה. פתוח מגיל 18 מכל העולם.",
+      "topics": [
+        "any"
+      ]
+    },
+    {
+      "feeNote": "",
+      "tags": [
+        "2,500$"
+      ],
+      "verified": false,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "material-works-award-2026",
+      "title": "Material Works Art Award 2026",
+      "org": "Material Works",
+      "url": "https://www.artrabbit.com/artist-opportunities/2026/december/material-works-art-award-2o26",
+      "deadline": "2026-12-06",
+      "region": "online",
+      "place": "",
+      "type": "prize",
+      "fee": "unknown",
+      "desc": "פרס רכישה של 2,500$ ועבודה שנכנסת לאוסף. פתוח לאמנים מגיל 18 מכל העולם, כולל ציור וצילום.",
+      "topics": [
+        "painting",
+        "photo",
+        "sculpture"
+      ]
+    },
+    {
+      "feeNote": "",
+      "tags": [],
+      "verified": false,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "elsehere-open-call",
+      "title": "ELSEHERE, קול קורא פתוח",
+      "org": "Elsehere",
+      "url": "https://www.elsehereglobal.com/open-calls/elsehere-artist-open-call",
+      "deadline": "2026-12-09",
+      "region": "online",
+      "place": "",
+      "type": "publication",
+      "fee": "free",
+      "desc": "קול קורא בלי דמי הגשה לאמנים, חוקרים ויוצרים בין־תחומיים. עבודות שנבחרות יכולות להגיע לפרסום, לפרופיל אמן או לשיתופי פעולה.",
+      "topics": [
+        "text",
+        "any"
+      ]
+    },
+    {
+      "feeNote": "",
+      "tags": [
+        "וידאו",
+        "מיצב"
+      ],
+      "verified": false,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "emaf-2027",
+      "title": "EMAF 2027, פסטיבל אמנות המדיה האירופי",
+      "org": "European Media Art Festival",
+      "url": "https://expcinema.org/site/en/call/emaf-2027-call-entries",
+      "deadline": "2026-12-15",
+      "region": "abroad",
+      "place": "אוסנבריק, גרמניה",
+      "type": "festival",
+      "fee": "unknown",
+      "desc": "הגשות לסרט, מיצב וקולנוע מורחב. הקול הקורא נסגר אחרי 2,200 הגשות, אז כדאי להגיש מוקדם.",
+      "topics": [
+        "video",
+        "newmedia",
+        "sculpture"
+      ]
+    },
+    {
+      "feeNote": "",
+      "tags": [
+        "שכר אמן",
+        "€300",
+        "שוטף"
+      ],
+      "verified": true,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "a4sounds-born-to-be-alive",
+      "title": "Born to be Alive",
+      "org": "A4 Sounds",
+      "url": "https://a4sounds.org/born-to-be-alive-brief/",
+      "deadline": null,
+      "region": "online",
+      "place": "דבלין (דיגיטלי)",
+      "type": "exhibition",
+      "fee": "free",
+      "desc": "תערוכה על שינוי חברתי רדיקלי. מחוץ לאירלנד אפשר להגיש רק עבודות דיגיטליות גמורות: וידאו, סאונד או דימוי. €300 לכל עבודה שנבחרת. ההגשות נבדקות כל יום שני עד שהתקציב נגמר.",
+      "topics": [
+        "video",
+        "sound",
+        "newmedia",
+        "photo",
+        "social"
+      ]
+    },
+    {
+      "feeNote": "",
+      "tags": [],
+      "verified": false,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "moc-artists-hardship-2026",
+      "title": "סיוע לאמנים במצוקה כלכלית 2026",
+      "org": "משרד התרבות והספורט",
+      "url": "https://www.gov.il/he/pages/amanim",
+      "deadline": "2026-11-24",
+      "region": "il",
+      "place": "",
+      "type": "grant",
+      "fee": "free",
+      "desc": "מענק סיוע לאמנים ואמניות במצוקה כלכלית, לפי מבחן תמיכה בפרט. כל התחומים.",
+      "topics": [
+        "any"
+      ]
+    },
+    {
+      "feeNote": "",
+      "tags": [
+        "קולקטיבים"
+      ],
+      "verified": false,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "andreas-zust-2027",
+      "title": "רזידנסי Bibliothek Andreas Züst 2027",
+      "org": "Bibliothek Andreas Züst",
+      "url": "https://contemporaryperformance.com/2026/10/28/bibliothek-andreas-zust-residency27/",
+      "deadline": "2026-12-15",
+      "region": "abroad",
+      "place": "אוברג, שווייץ",
+      "type": "residency",
+      "fee": "free",
+      "desc": "רזידנסי בספרייה באלפים לצמדים וקולקטיבים, עם לינה, ארוחות ותמיכה בנסיעות. במחזורים קודמים ההגשה הייתה בלי תשלום.",
+      "topics": [
+        "any",
+        "text"
+      ]
+    },
+    {
+      "feeNote": "",
+      "tags": [
+        "צילום",
+        "€1,000"
+      ],
+      "verified": false,
+      "status": "open",
+      "lastDeadline": null,
+      "addedAt": "2026-11-09",
+      "id": "futures-residency-2027",
+      "title": "FUTURES Residency 2027",
+      "org": "FUTURES Photography",
+      "url": "https://www.futures-photography.com/news/futures-residency-open-call-2027",
+      "deadline": "2027-06-22",
+      "region": "abroad",
+      "place": "אמסטרדם, ריגה, בודפשט",
+      "type": "residency",
+      "fee": "unknown",
+      "desc": "רזידנסי לצלמים בתחילת הדרך עם מלגה של €1,000, לינה וסטודיו. כדאי לבדוק אם הקול הקורא פתוח לכולם או רק דרך מוסדות שותפים.",
+      "topics": [
+        "photo"
+      ]
     }
   ]
 }
