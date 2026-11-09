@@ -1,0 +1,9 @@
+{
+  "name": "open-calls",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@vercel/blob": "^1.0.0",
+    "jose": "^5.9.6"
+  }
+}

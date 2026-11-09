@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>לוח קולות קוראים</title>
+<meta name="description" content="קולות קוראים לאמנות חזותית וצילום, בארץ ובעולם. מתעדכן כל בוקר.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+/* Layout: a contact sheet. Filter bar on top, each open call is a numbered frame on one strip */
+:root{
+  --paper:#f2f3f1; --sheet:#ffffff; --ink:#18191a; --muted:#5d6461; --line:#d9dcd8;
+  --safelight:#a8540f; --safelight-soft:#f6e7d6;
+  --ok:#2f6b45; --ok-soft:#e1efe5; --warn:#8a5a00; --warn-soft:#f7ecd2; --late:#9b2c22; --late-soft:#f6dfdc;
+  --f-display:"Frank Ruhl Libre","Times New Roman",serif;
+  --f-body:"IBM Plex Sans Hebrew",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#121413; --sheet:#1b1e1d; --ink:#ebedea; --muted:#9aa29e; --line:#2e3331;
+  --safelight:#e08a3c; --safelight-soft:#3a2716;
+  --ok:#7fc79a; --ok-soft:#1d3226; --warn:#e5b45a; --warn-soft:#3a2f17; --late:#ef8a7f; --late-soft:#3d1f1c;
+  color-scheme:dark}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+#notice:empty{display:none}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:24px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;border-bottom:2px solid var(--ink);padding-bottom:16px}
+.hgroup{display:flex;flex-direction:column;gap:6px;min-width:0}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;color:var(--safelight)}
+h1{font-family:var(--f-display);font-size:clamp(30px,5vw,44px);line-height:1.1;margin:0;text-wrap:balance}
+.side{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.scan{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.dot.stale{background:var(--warn)}
+.me{display:flex;align-items:center;gap:8px;font-size:13px}
+.me img{width:26px;height:26px;border-radius:50%}
+.linkbtn{font:inherit;font-size:13px;background:none;border:0;color:var(--safelight);cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tabs button{font:inherit;font-size:15px;font-weight:500;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:6px 12px;margin-bottom:-1px;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--safelight)}
+.tabs .n{font-family:var(--f-mono);font-size:12px;margin-inline-start:6px}
+.filters{display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:10px;background:var(--sheet);border:1px solid var(--line);padding:14px}
+.filters label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);min-width:0}
+.filters input[type=search],.filters select{font:inherit;font-size:14px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:7px 10px;width:100%}
+.row2{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chips button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:3px 12px;border-radius:999px;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.filters label.check{flex-direction:row;align-items:center;gap:6px;font-size:13px;color:var(--ink);cursor:pointer}
+.check[hidden]{display:none}
+.reset{margin-inline-start:auto}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--safelight);outline-offset:2px}
+.count{font-size:13px;color:var(--muted);margin:0}
+.strip{display:flex;flex-direction:column;background:var(--sheet);border:1px solid var(--line)}
+.frame{display:grid;grid-template-columns:52px minmax(0,1fr) 170px;gap:16px;padding:18px;border-top:1px solid var(--line)}
+.frame:first-child{border-top:0}
+.frame.is-done{opacity:.6}
+.fno{font-family:var(--f-mono);font-size:12px;color:var(--safelight);padding-top:3px}
+.body{min-width:0;display:flex;flex-direction:column;gap:6px}
+.title{font-weight:600;font-size:16px;margin:0}
+.title a{color:var(--ink);text-decoration-color:var(--line);text-underline-offset:3px}
+.title a:hover{text-decoration-color:var(--safelight)}
+.org{color:var(--muted);font-size:13px}
+.desc{margin:0;max-width:66ch}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;border:1px solid var(--line);border-radius:4px;padding:0 7px;color:var(--muted)}
+.tag.free{border-color:var(--ok);color:var(--ok)}
+.tag.new{border-color:var(--safelight);color:var(--safelight)}
+.friends{font-size:12.5px;color:var(--ok)}
+.when{display:flex;flex-direction:column;align-items:flex-end;gap:6px;text-align:end}
+.date{font-family:var(--f-mono);font-size:14px;font-variant-numeric:tabular-nums}
+.pill{font-size:12px;font-weight:500;padding:1px 9px;border-radius:999px;white-space:nowrap}
+.p-soon{background:var(--late-soft);color:var(--late)}
+.p-mid{background:var(--warn-soft);color:var(--warn)}
+.p-far{background:var(--ok-soft);color:var(--ok)}
+.p-roll{background:var(--safelight-soft);color:var(--safelight)}
+.p-check{border:1px dashed var(--warn);color:var(--warn)}
+.acts{display:flex;gap:6px;margin-top:4px;flex-wrap:wrap;justify-content:flex-end}
+.acts button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:4px;padding:2px 9px;cursor:pointer}
+.acts button[aria-pressed="true"]{background:var(--ok-soft);border-color:var(--ok);color:var(--ok)}
+.acts button.star[aria-pressed="true"]{background:var(--safelight-soft);border-color:var(--safelight);color:var(--safelight)}
+.empty{background:var(--sheet);border:1px dashed var(--line);padding:32px 20px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:6px;align-items:center}
+.empty strong{color:var(--ink);font-family:var(--f-display);font-size:19px;font-weight:500}
+.notice{font-size:13px;background:var(--warn-soft);color:var(--warn);padding:8px 12px;border-radius:4px}
+.signin-hint{font-size:13px;color:var(--muted);background:var(--sheet);border:1px solid var(--line);padding:10px 14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+footer{color:var(--muted);font-size:12.5px;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:760px){
+  .filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .filters label.search{grid-column:1/-1}
+}
+@media (max-width:600px){
+  .frame{grid-template-columns:34px minmax(0,1fr);gap:10px 12px}
+  .when{grid-column:2;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;text-align:start}
+  .acts{justify-content:flex-start}
+  .side{align-items:flex-start}
+  .reset{margin-inline-start:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="hgroup">
+      <span class="eyebrow">צילום · אמנות חזותית · בארץ ובעולם</span>
+      <h1>לוח קולות קוראים</h1>
+    </div>
+    <div class="side">
+      <div class="scan"><span class="dot stale" id="scanDot"></span><span id="scanText">טוען…</span></div>
+      <div class="me" id="me"></div>
+    </div>
+  </header>
+
+  <div class="signin-hint" id="signinHint" hidden>
+    <span>התחבר כדי לסמן מה שמרת ומה הגשת, ולראות מי מהחברים כבר הגיש.</span>
+    <div id="gbtn"></div>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="תצוגה">
+    <button role="tab" id="tab-open" aria-selected="true" data-tab="open">פתוח עכשיו<span class="n" id="nOpen"></span></button>
+    <button role="tab" id="tab-rec" aria-selected="false" data-tab="recurring">חוזרים כל שנה<span class="n" id="nRec"></span></button>
+  </div>
+
+  <div class="filters">
+    <label class="search">חיפוש
+      <input type="search" id="q" placeholder="שם, מוסד, נושא…">
+    </label>
+    <label>דדליין
+      <select id="fDeadline">
+        <option value="all">הכול</option>
+        <option value="7">בשבוע הקרוב</option>
+        <option value="30">בחודש הקרוב</option>
+        <option value="90">ב־3 חודשים</option>
+        <option value="later">יותר מ־3 חודשים</option>
+        <option value="none">שוטף / בלי תאריך</option>
+      </select>
+    </label>
+    <label>סוג
+      <select id="fType">
+        <option value="all">כל הסוגים</option>
+        <option value="exhibition">תערוכה</option>
+        <option value="residency">רזידנסי</option>
+        <option value="grant">מענק</option>
+        <option value="prize">פרס</option>
+        <option value="festival">פסטיבל</option>
+        <option value="publication">פרסום</option>
+        <option value="other">אחר</option>
+      </select>
+    </label>
+    <label>מיון
+      <select id="fSort">
+        <option value="deadline">לפי דדליין</option>
+        <option value="added">חדשים קודם</option>
+      </select>
+    </label>
+    <div class="row2">
+      <div class="chips" role="group" aria-label="מיקום">
+        <button data-r="all" aria-pressed="true">הכול</button>
+        <button data-r="il" aria-pressed="false">בארץ</button>
+        <button data-r="abroad" aria-pressed="false">חו״ל</button>
+        <button data-r="online" aria-pressed="false">אונליין</button>
+      </div>
+      <label class="check"><input type="checkbox" id="fFree"> בלי דמי הגשה</label>
+      <label class="check" id="lHideDone" hidden><input type="checkbox" id="fHideDone"> הסתר מה שהגשתי</label>
+      <label class="check" id="lSaved" hidden><input type="checkbox" id="fSaved"> רק שמורים</label>
+      <button class="linkbtn reset" id="reset">נקה סינון</button>
+    </div>
+  </div>
+
+  <p class="count" id="count" aria-live="polite"></p>
+  <div id="notice"></div>
+  <div id="list"><div class="empty"><strong>טוען את הקולות הקוראים</strong></div></div>
+
+  <footer>
+    <span>הרשימה מתעדכנת כל בוקר מסריקה של ערב רב, איגוד האמנים, פורטפוליו וחיפוש ברשת. קולות קוראים שהדדליין שלהם עבר יורדים מהרשימה מעצמם.</span>
+    <span>“לוודא” מסמן פרט שלא אושר מול המקור. לפני הגשה כדאי לבדוק תנאי סף ודמי הגשה בקישור.</span>
+  </footer>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

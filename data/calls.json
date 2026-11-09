@@ -1,0 +1,450 @@
+{
+ "updatedAt": "2026-11-08T06:45:00Z",
+ "calls": [
+  {
+   "id": "arcathens-2027",
+   "title": "ARCAthens 2027",
+   "org": "ARCAthens",
+   "url": "https://open-call-arts.vercel.app/dashboard",
+   "deadline": "2026-11-14",
+   "region": "abroad",
+   "place": "אתונה",
+   "type": "residency",
+   "fee": "unknown",
+   "desc": "רזידנסי במימון מלא: מלגה של 3,000$, דיור, טיסה ותשלום שבועי.",
+   "tags": [
+    "ממומן"
+   ],
+   "verified": false,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "artis-residency",
+   "title": "רזידנסי בחו״ל, ארטיס",
+   "org": "Artis",
+   "url": "https://www.erev-rav.com/archives/62603",
+   "region": "il",
+   "place": "",
+   "type": "residency",
+   "fee": "free",
+   "desc": "רזידנסי ממומן במוסדות שותפים בחו״ל לאמנים ישראלים.",
+   "tags": [
+    "ממומן"
+   ],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "31.8.26"
+  },
+  {
+   "id": "banff-sounding-mountain",
+   "title": "Sounding Like a Mountain",
+   "org": "Banff Centre",
+   "url": "https://artistcommunities.org/directory/open-calls/visual-arts-sounding-mountain",
+   "deadline": "2026-11-18",
+   "region": "abroad",
+   "place": "באנף, קנדה",
+   "type": "residency",
+   "fee": "paid",
+   "feeNote": "כ־CAD 4,480 אחרי מלגה",
+   "desc": "רזידנסי של 5 שבועות על אקולוגיה אקוסטית, קול, זיכרון ומקום. דמי הגשה CAD 65.",
+   "tags": [
+    "סאונד"
+   ],
+   "verified": true,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "braun-prize",
+   "title": "פרס ורנר וענת בראון לצילום",
+   "org": "מוזיאון ארץ ישראל",
+   "url": "https://igud-omanim.org/updates/braunn-prize-26/",
+   "region": "il",
+   "place": "תל אביב",
+   "type": "prize",
+   "fee": "free",
+   "desc": "30,000 ₪ לאמן צעיר, מגיל 25, לצילום שעוסק במרחב המקומי.",
+   "tags": [
+    "צילום"
+   ],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "31.8.26"
+  },
+  {
+   "id": "daad-berlin-2028",
+   "title": "DAAD Artists-in-Berlin 2028",
+   "org": "DAAD",
+   "url": "https://www.berliner-kuenstlerprogramm.de/en/",
+   "deadline": "2026-12-15",
+   "region": "abroad",
+   "place": "ברלין",
+   "type": "residency",
+   "fee": "free",
+   "desc": "רזידנסי במימון מלא בברלין: מלגה חודשית, דירה ונסיעות.",
+   "tags": [
+    "ממומן"
+   ],
+   "verified": false,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "dying-exhibit-2027",
+   "title": "Dying.exhibit 2027",
+   "org": "Dying.series",
+   "url": "https://akimbo.ca/listings/call-for-submissions-dying-exhibit-2027/",
+   "deadline": "2026-11-10",
+   "region": "abroad",
+   "place": "טורונטו",
+   "type": "exhibition",
+   "fee": "free",
+   "desc": "תערוכה קבוצתית על מוות, גסיסה וטיפול: מחלה, אבל וסוף החיים. עד 5 דימויים, ושכר אמן לפי תעריף CARFAC.",
+   "tags": [
+    "מוות וטיפול",
+    "שכר אמן"
+   ],
+   "verified": true,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "expanded-photo-japan",
+   "title": "Expanded Photography Research Residency",
+   "org": "FotoCreativaBA ו־IDEA R LAB",
+   "url": "https://artistcommunities.org/directory/open-calls/expanded-photography-research-residency-japan-2027-2028",
+   "deadline": "2026-12-30",
+   "region": "abroad",
+   "place": "קורשיקי, יפן",
+   "type": "residency",
+   "fee": "paid",
+   "feeNote": "3,240$ השתתפות",
+   "desc": "מעבדה מקוונת של 12 חודשים ואחריה חודש רזידנסי ביפן. בלי דמי הגשה, אבל ההשתתפות בתשלום ובלי טיסות.",
+   "tags": [
+    "צילום"
+   ],
+   "verified": true,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "fresh-paint-hachamama",
+   "title": "החממה, יריד צבע טרי",
+   "org": "צבע טרי",
+   "url": "https://www.erev-rav.com/archives/62724",
+   "region": "il",
+   "place": "תל אביב",
+   "type": "exhibition",
+   "fee": "unknown",
+   "desc": "ליווי אוצרותי והצגה ביריד, לאמנים בלי גלריה מייצגת.",
+   "tags": [],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "14.10.26"
+  },
+  {
+   "id": "hamecarer",
+   "title": "המקרר",
+   "org": "עמותת המקרר",
+   "url": "https://hamecarer.co.il/%d7%a7%d7%95%d7%9c-%d7%a7%d7%95%d7%a8%d7%90-2027-2/",
+   "region": "il",
+   "place": "תל אביב",
+   "type": "exhibition",
+   "fee": "free",
+   "desc": "תערוכה עם שכר אמן ותקציב הפקה קטן, לאמנות במפגש עם מחקר, אקטיביזם ומעורבות חברתית.",
+   "tags": [
+    "שכר אמן"
+   ],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "8.8.26"
+  },
+  {
+   "id": "herzl-107",
+   "title": "תערוכות לאמנים צעירים",
+   "org": "בית הצעירים הרצל 107",
+   "url": "https://forms.gle/H1Jvmp2qth97mUuH6",
+   "region": "il",
+   "place": "תל אביב",
+   "type": "exhibition",
+   "fee": "free",
+   "desc": "הצגה של כחודש וחצי בחלל התערוכות בדרום ת״א, בלי צורך בניסיון קודם.",
+   "tags": [
+    "יחיד"
+   ],
+   "verified": true,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "hopper-fall-2026",
+   "title": "The Hopper Prize, סתיו 2026",
+   "org": "The Hopper Prize",
+   "url": "https://hopperprize.org/",
+   "deadline": "2026-11-17",
+   "region": "online",
+   "place": "",
+   "type": "grant",
+   "fee": "paid",
+   "feeNote": "דמי הגשה 40$",
+   "desc": "מענקים של 4,500$ ו־1,000$ לאמנים וצלמים מכל העולם, ועוד רשימה קצרה של 30 לחשיפה.",
+   "tags": [],
+   "verified": true,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "israel-festival-2027",
+   "title": "פסטיבל ישראל 2027",
+   "org": "פסטיבל ישראל",
+   "url": "https://www.instagram.com/p/DegczxKIpgO/",
+   "deadline": "2026-11-10",
+   "region": "il",
+   "place": "ירושלים",
+   "type": "festival",
+   "fee": "unknown",
+   "desc": "יצירות מקור בבכורה, רב־תחומיות, כולל אמנות במרחב הציבורי.",
+   "tags": [
+    "רב־תחומי"
+   ],
+   "verified": false,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "jan-van-eyck-2028",
+   "title": "Jan van Eyck Academie, רזידנסי 2028",
+   "org": "Jan van Eyck Academie",
+   "url": "https://www.janvaneyck.nl/residency/apply",
+   "deadline": "2026-11-30",
+   "region": "abroad",
+   "place": "מסטריכט",
+   "type": "residency",
+   "fee": "free",
+   "desc": "רזידנסי של 11 חודשים עם דיור, סטודיו ומלגה של 1,500€ בחודש.",
+   "tags": [
+    "מלגה"
+   ],
+   "verified": false,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "jcc-work-in-progress",
+   "title": "Work in Progress Grant",
+   "org": "Israel Culture Project, JCC מנהטן",
+   "url": "https://igud-omanim.org/updates/work-in-progress-26/",
+   "deadline": "2026-11-15",
+   "region": "il",
+   "place": "",
+   "type": "grant",
+   "fee": "free",
+   "desc": "ארבעה אמנים ישראלים מקבלים מענק חופשי של 5,000$ ושתי שיחות ייעוץ עם אנשי מקצוע בניו יורק.",
+   "tags": [
+    "5,000$"
+   ],
+   "verified": true,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "makom-meareach",
+   "title": "מקום מארח, גלריה מקום לאמנות",
+   "org": "מקום לאמנות",
+   "url": "https://www.erev-rav.com/archives/62508",
+   "region": "il",
+   "place": "",
+   "type": "exhibition",
+   "fee": "unknown",
+   "desc": "תערוכה של 6 שבועות וליווי אוצרותי.",
+   "tags": [],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "15.9.26"
+  },
+  {
+   "id": "meitar-prize",
+   "title": "פרס מיתר למצוינות בצילום",
+   "org": "PHOTO IS:RAEL",
+   "url": "https://artoday.art/2026/02/27/%D7%97%D7%92%D7%99%D7%92%D7%95%D7%AA-%D7%94%D7%A2%D7%A9%D7%95%D7%A8-%D7%9C%D7%A4%D7%A8%D7%A1-%D7%9E%D7%99%D7%AA%D7%A8-%D7%9C%D7%9E%D7%A6%D7%95%D7%99%D7%A0%D7%95%D7%AA-%D7%91%D7%A6%D7%99%D7%9C%D7%95/",
+   "region": "il",
+   "place": "תל אביב",
+   "type": "prize",
+   "fee": "unknown",
+   "desc": "פרס בשווי 50,000 ₪ ותערוכת יחיד. 20 פיינליסטים מציגים בפסטיבל הצילום.",
+   "tags": [
+    "צילום"
+   ],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "נפתח בפברואר"
+  },
+  {
+   "id": "meshes",
+   "title": "MESHES: קולנוע־תמונה־סאונד",
+   "org": "MESHES",
+   "url": "https://expcinema.org/site/en/call/meshes-cinema-imagem-sonica",
+   "deadline": "2026-11-25",
+   "region": "online",
+   "place": "",
+   "type": "exhibition",
+   "fee": "unknown",
+   "desc": "תערוכה מקוונת לתמונה נעה שבה הסאונד הוא החומר שמוביל את העין.",
+   "tags": [
+    "סאונד",
+    "וידאו"
+   ],
+   "verified": false,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "miron-sima",
+   "title": "פרס מירון סימה",
+   "org": "בית האמנים ירושלים",
+   "url": "https://www.erev-rav.com/archives/60982",
+   "region": "il",
+   "place": "ירושלים",
+   "type": "prize",
+   "fee": "unknown",
+   "desc": "פרס ותערוכה, גילאי 25–45, כולל צילום ומדיה חדשה.",
+   "tags": [],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "תחילת 2026"
+  },
+  {
+   "id": "ok-protest-2027",
+   "title": "OK מחאה 2027",
+   "org": "מוזיאון העיר תל אביב–יפו",
+   "url": "https://www.erev-rav.com/archives/62792",
+   "deadline": "2026-11-10",
+   "region": "il",
+   "place": "תל אביב",
+   "type": "exhibition",
+   "fee": "free",
+   "desc": "עבודת וידאו על מחאה או מאבק עכשווי, תיעודי, ניסיוני או וידאו־ארט. מוקרנת במוזיאון ארבעה חודשים, עם שכר אמן.",
+   "tags": [
+    "וידאו",
+    "שכר אמן"
+   ],
+   "verified": true,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "photoisrael-main",
+   "title": "התערוכה המרכזית, פסטיבל הצילום",
+   "org": "PHOTO IS:RAEL",
+   "url": "https://www.erev-rav.com/archives/62383",
+   "region": "il",
+   "place": "תל אביב",
+   "type": "festival",
+   "fee": "paid",
+   "feeNote": "כ־22$",
+   "desc": "הצגה בפסטיבל הצילום הבינלאומי בת״א, הגשה אחת לאמן.",
+   "tags": [
+    "צילום"
+   ],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "28.7.26"
+  },
+  {
+   "id": "plums-grants",
+   "title": "מענקי יצירה, קרן פלומס",
+   "org": "קרן פלומס",
+   "url": "https://www.prtfl.co.il/archives/244624",
+   "region": "il",
+   "place": "",
+   "type": "grant",
+   "fee": "free",
+   "desc": "20,000–100,000 ₪, 40 מענקים, כולל צילום ווידאו.",
+   "tags": [],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "30.3.26"
+  },
+  {
+   "id": "presser-prize",
+   "title": "פרס פרסר לצילום ישראלי צעיר",
+   "org": "מוזיאון תל אביב לאמנות",
+   "url": "https://igud-omanim.org/updates/presser-2026/",
+   "region": "il",
+   "place": "תל אביב",
+   "type": "prize",
+   "fee": "free",
+   "desc": "5,000$ ותערוכת יחיד במוזיאון. עד גיל 45, תואר באמנות או צילום, 2 תערוכות לפחות.",
+   "tags": [
+    "צילום"
+   ],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "17.5.26"
+  },
+  {
+   "id": "rappaport-acquisitions",
+   "title": "רכישות פרס רפפורט",
+   "org": "קרן רפפורט ומוזיאון ת״א",
+   "url": "https://www.erev-rav.com/archives/62829",
+   "region": "il",
+   "place": "תל אביב",
+   "type": "grant",
+   "fee": "free",
+   "desc": "מאגר של 250,000$ לרכישות למוזיאון ת״א, לאמנים ישראלים בכל גיל.",
+   "tags": [],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "31.10.26"
+  },
+  {
+   "id": "seto-art-residency",
+   "title": "Seto Art Residency",
+   "org": "Salt Road Studio",
+   "url": "https://artistcommunities.org/directory/organizations/seto-art-residency-salt-road-studio",
+   "deadline": "2027-04-30",
+   "region": "abroad",
+   "place": "אקו, יפן",
+   "type": "residency",
+   "fee": "unknown",
+   "desc": "שלושה שבועות במימון מלא לשלושה אמנים: טיסות, לינה, סטודיו ומלגה.",
+   "tags": [
+    "ממומן"
+   ],
+   "verified": false,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "textura",
+   "title": "ט־טקס־טקסט־טקסטורה",
+   "org": "כתב העת טקסטורה",
+   "url": "https://textura-mag.org/occurrences/10032/",
+   "region": "il",
+   "place": "",
+   "type": "publication",
+   "fee": "free",
+   "desc": "קול קורא מתמשך: דימוי של עבודה ומשפט שנפתח ב״טקסטורה עבורי…״.",
+   "tags": [],
+   "verified": true,
+   "status": "open",
+   "addedAt": "2026-11-01"
+  },
+  {
+   "id": "young-artist-prize",
+   "title": "פרס האמן הצעיר, משרד התרבות",
+   "org": "משרד התרבות",
+   "url": "https://igud-omanim.org/updates/prasim-culture-26/",
+   "region": "il",
+   "place": "",
+   "type": "prize",
+   "fee": "free",
+   "desc": "10,000 ₪, עד 7 זוכים. גילאי 27–35, 3 שנות פעילות, 2 תערוכות קבוצתיות סלקטיביות.",
+   "tags": [],
+   "verified": true,
+   "status": "recurring",
+   "lastDeadline": "4.10.26"
+  }
+ ]
+}
