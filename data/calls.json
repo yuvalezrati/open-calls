@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-11-09T09:04:13Z",
+  "updatedAt": "2026-11-09T09:30:04Z",
   "calls": [
     {
       "id": "arcathens-2027",
       "title": "ARCAthens 2027",
       "org": "ARCAthens",
-      "url": "https://open-call-arts.vercel.app/dashboard",
+      "url": "https://arcathens.org/",
       "deadline": "2026-11-14",
       "region": "abroad",
       "place": "אתונה",
       "type": "residency",
-      "fee": "unknown",
+      "fee": "free",
       "desc": "רזידנסי במימון מלא: מלגה של 3,000$, דיור, טיסה ותשלום שבועי.",
       "tags": [
         "ממומן"
@@ -875,6 +875,73 @@
       "topics": [
         "photo"
       ]
+    },
+    {
+      "id": "sony-world-photo-awards-2027",
+      "title": "Sony World Photography Awards 2027",
+      "org": "World Photography Organisation",
+      "url": "https://www.worldphoto.org/pro",
+      "deadline": "2027-01-12",
+      "region": "online",
+      "place": "",
+      "type": "prize",
+      "fee": "free",
+      "desc": "תחרות צילום בינלאומית חינמית: תחרות הסדרות (5–10 תמונות) עם פרס ראשי של 25,000$ ותערוכה בלונדון. תחרות התמונה הבודדת נסגרת ב־5.1.27.",
+      "tags": [
+        "חינם",
+        "סדרה",
+        "לונדון"
+      ],
+      "topics": [
+        "photo"
+      ],
+      "verified": true,
+      "status": "open",
+      "addedAt": "2026-11-09"
+    },
+    {
+      "id": "now-art-fund-2027",
+      "title": "קול קורא 2027, קרן אמנות עכשיו",
+      "org": "קרן אמנות עכשיו Now.Art",
+      "url": "https://www.instagram.com/p/DfOuTncN9U4/",
+      "deadline": "2026-12-31",
+      "region": "il",
+      "place": "",
+      "type": "grant",
+      "fee": "free",
+      "desc": "תמיכה בפרויקטים של אמנים חזותיים עכשוויים בישראל. מגישים PDF עם תיאור הפרויקט, תמונות, תקציב, ביוגרפיה ותיק עבודות.",
+      "tags": [
+        "מענק",
+        "פרויקט"
+      ],
+      "topics": [
+        "any"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-09"
+    },
+    {
+      "id": "givat-haviva-new-heavens-2027",
+      "title": "באין שמיים חדשים – אין ארץ חדשה",
+      "org": "הגלריה בגבעת חביבה",
+      "url": "https://artsinisrael.org/open-call/%D7%A7%D7%95%D7%9C%D7%95%D7%AA-%D7%A7%D7%95%D7%A8%D7%90%D7%99%D7%9D-%D7%9E%D7%AA%D7%A2%D7%93%D7%9B%D7%A0%D7%99%D7%9D/",
+      "deadline": "2027-01-30",
+      "region": "il",
+      "place": "גבעת חביבה",
+      "type": "exhibition",
+      "fee": "free",
+      "desc": "תערוכה קבוצתית של עבודות קיימות על מבט מחודש בקיבוץ, בעצמנו ובעולם (3–17.4.27). האמנים מקבלים שכר אמן לפי תעריף איגוד האמנים.",
+      "tags": [
+        "קבוצתית",
+        "שכר אמן"
+      ],
+      "topics": [
+        "any"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-09"
     }
   ]
 }
