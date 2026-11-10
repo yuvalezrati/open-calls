@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T09:30:42Z",
+  "updatedAt": "2026-11-10T05:31:31Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -964,6 +964,102 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-09"
+    },
+    {
+      "id": "john-ruskin-prize-2027",
+      "title": "פרס ג׳ון ראסקין ה־9: Not for Present Delight",
+      "org": "The John Ruskin Prize",
+      "url": "https://www.ruskinprize.co.uk/2027prize",
+      "deadline": "2026-11-17",
+      "region": "abroad",
+      "place": "לונדון, בריטניה",
+      "type": "prize",
+      "fee": "unknown",
+      "desc": "פרס בינלאומי לכל מדיום דו־ממדי או תלת־ממדי, כולל צילום, סביב הנושא \"Not for Present Delight\". פרסים בסך 10,000 ליש״ט ותערוכה ב־Trinity Buoy Wharf בלונדון; אמנים מחו״ל לא חייבים לשלוח עבודות פיזיות.",
+      "tags": [
+        "פרס",
+        "בינלאומי",
+        "תערוכה"
+      ],
+      "topics": [
+        "photo",
+        "painting",
+        "sculpture",
+        "any"
+      ],
+      "verified": true,
+      "status": "open",
+      "addedAt": "2026-11-10"
+    },
+    {
+      "id": "bernheim-air-2027",
+      "title": "רזידנסי Bernheim Forest 2027",
+      "org": "Bernheim Arboretum and Research Forest",
+      "url": "https://bernheim.org/arts-in-nature/artist-in-residence/",
+      "deadline": "2026-11-30",
+      "region": "abroad",
+      "place": "קנטקי, ארה״ב",
+      "type": "residency",
+      "fee": "unknown",
+      "desc": "רזידנסי של 6–8 שבועות ביער ובגן בוטני בקנטקי, פתוח לאמנים חזותיים בכל מדיום ולאמנים מחו״ל. כולל מגורים במקום ומלגה; ויזה ונסיעות על חשבון האמן.",
+      "tags": [
+        "רזידנסי",
+        "טבע",
+        "בינלאומי"
+      ],
+      "topics": [
+        "any"
+      ],
+      "verified": true,
+      "status": "open",
+      "addedAt": "2026-11-10"
+    },
+    {
+      "id": "vital-impacts-2027",
+      "title": "מלגות צילום סביבתי Vital Impacts 2027",
+      "org": "Vital Impacts",
+      "url": "https://vitalimpacts.org/pages/the-vital-impacts-environmental-photography-grant",
+      "deadline": "2026-11-30",
+      "region": "online",
+      "place": "",
+      "type": "grant",
+      "fee": "paid",
+      "feeNote": "25$, אפשר לבקש פטור",
+      "desc": "מלגה אחת של 20,000$ ושש של 5,000$ לפרויקט צילום סביבתי של שנה, ועוד תוכנית חונכות לעשרה צלמים מתחילים. מיועד לצלמים שמתעדים את הקהילה או המקום שבו הם חיים.",
+      "tags": [
+        "צילום",
+        "מלגה",
+        "סביבה"
+      ],
+      "topics": [
+        "photo"
+      ],
+      "verified": true,
+      "status": "open",
+      "addedAt": "2026-11-10"
+    },
+    {
+      "id": "decagon-room-next-door",
+      "title": "The Room Next Door, תחרות צילום",
+      "org": "Decagon Gallery",
+      "url": "https://decagongallery.com/the-room-next-door-entry",
+      "deadline": "2026-12-15",
+      "region": "online",
+      "place": "",
+      "type": "exhibition",
+      "fee": "paid",
+      "feeNote": "25$ לעד 4 תמונות",
+      "desc": "קול קורא לצלמים מכל העולם בכל טכניקה צילומית. הנבחרים מוצגים בתערוכה מקוונת ובקטלוג, ויש פרסים כספיים של עד 500$.",
+      "tags": [
+        "צילום",
+        "תערוכה מקוונת"
+      ],
+      "topics": [
+        "photo"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-10"
     }
   ]
 }
