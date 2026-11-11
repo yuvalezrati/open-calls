@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T05:31:31Z",
+  "updatedAt": "2026-11-11T05:20:05Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -110,7 +110,7 @@
       "title": "Dying.exhibit 2027",
       "org": "Dying.series",
       "url": "https://akimbo.ca/listings/call-for-submissions-dying-exhibit-2027/",
-      "deadline": "2026-11-10",
+      "deadline": null,
       "region": "abroad",
       "place": "טורונטו",
       "type": "exhibition",
@@ -121,11 +121,12 @@
         "שכר אמן"
       ],
       "verified": true,
-      "status": "open",
+      "status": "recurring",
       "addedAt": "2026-11-01",
       "topics": [
         "any"
-      ]
+      ],
+      "lastDeadline": "10.11.26"
     },
     {
       "id": "expanded-photo-japan",
@@ -235,7 +236,7 @@
       "title": "פסטיבל ישראל 2027",
       "org": "פסטיבל ישראל",
       "url": "https://www.instagram.com/p/DegczxKIpgO/",
-      "deadline": "2026-11-10",
+      "deadline": null,
       "region": "il",
       "place": "ירושלים",
       "type": "festival",
@@ -245,12 +246,13 @@
         "רב־תחומי"
       ],
       "verified": false,
-      "status": "open",
+      "status": "recurring",
       "addedAt": "2026-11-01",
       "topics": [
         "performance",
         "public"
-      ]
+      ],
+      "lastDeadline": "10.11.26"
     },
     {
       "id": "jan-van-eyck-2028",
@@ -378,7 +380,7 @@
       "title": "OK מחאה 2027",
       "org": "מוזיאון העיר תל אביב–יפו",
       "url": "https://www.erev-rav.com/archives/62792",
-      "deadline": "2026-11-10",
+      "deadline": null,
       "region": "il",
       "place": "תל אביב",
       "type": "exhibition",
@@ -389,12 +391,13 @@
         "שכר אמן"
       ],
       "verified": true,
-      "status": "open",
+      "status": "recurring",
       "addedAt": "2026-11-01",
       "topics": [
         "video",
         "social"
-      ]
+      ],
+      "lastDeadline": "10.11.26"
     },
     {
       "id": "photoisrael-main",
@@ -1060,6 +1063,49 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-10"
+    },
+    {
+      "id": "artis-residency-grants",
+      "title": "מענקי רזידנסי, ארטיס",
+      "org": "Artis",
+      "url": "https://artis.art/grants_and_open_calls/program/residency",
+      "deadline": null,
+      "region": "abroad",
+      "place": "",
+      "type": "grant",
+      "fee": "free",
+      "desc": "מענק של עד 5,000 דולר לאמנים מישראל שהתקבלו לרזידנסי בחו״ל ב־2026–2027, לכיסוי נסיעות, מחיה, חומרים ודמי השתתפות. הגשה שוטפת לפחות ארבעה חודשים לפני תחילת הרזידנסי, עם סבבי בדיקה רבעוניים.",
+      "tags": [
+        "הגשה שוטפת",
+        "מימון רזידנסי"
+      ],
+      "topics": [
+        "any"
+      ],
+      "verified": true,
+      "status": "open",
+      "addedAt": "2026-11-11"
+    },
+    {
+      "id": "outset-israel-2027",
+      "title": "מענק Outset ישראל 2027",
+      "org": "Outset Israel",
+      "url": "https://www.outset.art/outset-israel/open-call-to-artists-and-institutions",
+      "deadline": null,
+      "region": "il",
+      "place": "",
+      "type": "grant",
+      "fee": "free",
+      "desc": "מענק של עד 40,000 ש״ח לאמנים מישראל ליצירת גוף עבודות חדש שיוצג לראשונה ב־2027 בחלל אמנות ציבורי ללא מטרות רווח, בארץ או בחו״ל. הקול הקורא נפתח בנובמבר, וההגשה בנובמבר–דצמבר.",
+      "tags": [
+        "מענק הפקה"
+      ],
+      "topics": [
+        "any"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-11"
     }
   ]
 }
