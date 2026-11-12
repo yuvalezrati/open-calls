@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T05:20:05Z",
+  "updatedAt": "2026-11-12T05:25:39Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -1106,6 +1106,55 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-11"
+    },
+    {
+      "id": "art-circle-austria-2027",
+      "title": "ART CIRCLE Austria 2027, רזידנסי בסנט וולפגנג",
+      "org": "ART CIRCLE International",
+      "url": "https://artcircle.si/en/open-call/",
+      "deadline": "2026-12-15",
+      "region": "abroad",
+      "place": "אוסטריה",
+      "type": "residency",
+      "fee": "free",
+      "desc": "רזידנסי של שמונה ימים מעל אגם וולפגנג לאמנים מקצועיים מכל העולם. כולל חדר במלון וארוחות, מלגה של 500 אירו, עד 400 אירו לחומרים ותערוכה קבוצתית בסיום; הנסיעה על חשבון האמן.",
+      "tags": [
+        "מלגה",
+        "לינה וארוחות"
+      ],
+      "topics": [
+        "any",
+        "performance"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-12"
+    },
+    {
+      "id": "mensch-maschine-2027",
+      "title": "Mensch Maschine 2027: Energy Ghosts",
+      "org": "VISIT (קרן E.ON), E-WERK Luckenwalde, האקדמיה לאמנויות ברלין",
+      "url": "https://adk.de/en/academy/young-academy/human-machine-fellowship",
+      "deadline": "2026-12-01",
+      "region": "abroad",
+      "place": "גרמניה",
+      "type": "residency",
+      "fee": "free",
+      "desc": "ארבע מלגות רזידנסי בינלאומיות של שלושה חודשים בלוקנוואלדה ובברלין (אוגוסט–נובמבר 2027) לפרויקטים בצומת אמנות, אנרגיה ואקולוגיה. כל מלגה 20,000 אירו לכיסוי הפקה ונסיעות.",
+      "tags": [
+        "ממומן במלואו",
+        "20,000 אירו"
+      ],
+      "topics": [
+        "any",
+        "photo",
+        "video",
+        "sound",
+        "newmedia"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-12"
     }
   ]
 }
