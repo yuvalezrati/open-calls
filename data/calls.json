@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T05:25:39Z",
+  "updatedAt": "2026-11-13T05:25:54Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -541,8 +541,8 @@
         "קטלוג"
       ],
       "verified": true,
-      "status": "open",
-      "lastDeadline": null,
+      "status": "recurring",
+      "lastDeadline": "12.11.26",
       "addedAt": "2026-11-09",
       "id": "malamegi-lab-venice-2027",
       "title": "Lab Art Prize, מהדורת ונציה 2027",
@@ -1155,6 +1155,53 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-12"
+    },
+    {
+      "id": "emmanuel-college-ecar-2027",
+      "title": "Emmanuel College Artist Residency (ECAR) 2027",
+      "org": "Emmanuel College",
+      "url": "https://www.emmanuel.edu/academics/academic-study/schools/school-humanities-social-sciences/undergraduate-programs/art/artist-residence/ecar-application-requirements",
+      "deadline": "2026-12-18",
+      "region": "abroad",
+      "place": "בוסטון, ארה״ב",
+      "type": "residency",
+      "fee": "free",
+      "desc": "רזידנסי קיץ של שישה שבועות בקולג׳ בבוסטון, עם אמן אחד בכל תחום: צילום, קרמיקה, הדפס ופרקטיקה חברתית. מקבלים מלגה של 1,500 דולר, לינה במעונות, ולאמנים מחו״ל עד 1,000 דולר נוספים לטיסה ולוויזה.",
+      "tags": [
+        "רזידנסי ממומן",
+        "צילום"
+      ],
+      "topics": [
+        "photo",
+        "social"
+      ],
+      "verified": true,
+      "status": "open",
+      "addedAt": "2026-11-13"
+    },
+    {
+      "id": "sado-island-galaxy-2027",
+      "title": "Sado Island Galaxy Art Festival 2027",
+      "org": "Sado Island Galaxy Art Festival",
+      "url": "https://sado-art.com/en/news/4499/",
+      "deadline": "2026-12-22",
+      "region": "abroad",
+      "place": "האי סאדו, יפן",
+      "type": "festival",
+      "fee": "free",
+      "desc": "קול קורא בינלאומי לעבודות ואירועים ספציפיים לאתר באי סאדו שביפן, פתוח לכל הלאומים. כ־4–5 הצעות ייבחרו ויקבלו מענק הפקה של עד כ־2 מיליון ין, וגם עזרה בלינה ובמחקר מקומי.",
+      "tags": [
+        "מענק הפקה",
+        "ספציפי לאתר"
+      ],
+      "topics": [
+        "public",
+        "performance",
+        "any"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-13"
     }
   ]
 }
