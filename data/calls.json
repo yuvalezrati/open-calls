@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T05:25:54Z",
+  "updatedAt": "2026-11-14T05:31:44Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -1202,6 +1202,55 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-13"
+    },
+    {
+      "id": "acc-weimar-studio-2027",
+      "title": "תוכנית הסטודיו הבינלאומית ה־33, ACC Weimar",
+      "org": "ACC Galerie Weimar ועיריית ויימאר",
+      "url": "https://acc-weimar.de/atelierprogramm/",
+      "deadline": "2026-11-22",
+      "region": "abroad",
+      "place": "ויימאר, גרמניה",
+      "type": "residency",
+      "fee": "free",
+      "desc": "רזידנסי של ארבעה חודשים בוויימאר בנושא \"On Absence\", פתוח לאמנים מכל העולם ומכל התחומים. מקבלים דירה מרוהטת וסטודיו בלי שכר דירה ומלגה של 1,100 אירו לחודש; הנסיעות על חשבון האמן.",
+      "tags": [
+        "מלגה חודשית",
+        "דירה"
+      ],
+      "topics": [
+        "photo",
+        "video",
+        "sound",
+        "newmedia",
+        "any"
+      ],
+      "verified": true,
+      "status": "open",
+      "addedAt": "2026-11-14"
+    },
+    {
+      "id": "traces-sion-2027",
+      "title": "TRACES 2027: רזידנסי אמנות ומדע בסיון",
+      "org": "FDDM, EPFL Valais ועיריית סיון",
+      "url": "https://www.traces-opencall.ch/en",
+      "deadline": "2026-11-22",
+      "region": "abroad",
+      "place": "סיון, שווייץ",
+      "type": "residency",
+      "fee": "free",
+      "desc": "רזידנסי לאמנים חזותיים מקצועיים במעבדה לחומרי אנרגיה של EPFL, ינואר עד אפריל 2027. כולל מלגה של 2,000 פרנק לחודש, מגורים, החזר נסיעות עד 1,500 פרנק ותקציב הפקה.",
+      "tags": [
+        "מלגה חודשית",
+        "אמנות ומדע"
+      ],
+      "topics": [
+        "newmedia",
+        "any"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-14"
     }
   ]
 }
