@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T05:31:44Z",
+  "updatedAt": "2026-11-15T05:25:21Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -16,11 +16,12 @@
         "ממומן"
       ],
       "verified": false,
-      "status": "open",
+      "status": "recurring",
       "addedAt": "2026-11-01",
       "topics": [
         "any"
-      ]
+      ],
+      "lastDeadline": "14.11.26"
     },
     {
       "id": "artis-residency",
