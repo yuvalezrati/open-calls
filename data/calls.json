@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T05:25:21Z",
+  "updatedAt": "2026-11-16T05:25:15Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -291,11 +291,12 @@
         "5,000$"
       ],
       "verified": true,
-      "status": "open",
+      "status": "recurring",
       "addedAt": "2026-11-01",
       "topics": [
         "any"
-      ]
+      ],
+      "lastDeadline": "15.11.26"
     },
     {
       "id": "makom-meareach",
@@ -692,8 +693,8 @@
         "1,200$"
       ],
       "verified": false,
-      "status": "open",
-      "lastDeadline": null,
+      "status": "recurring",
+      "lastDeadline": "15.11.26",
       "addedAt": "2026-11-09",
       "id": "artist-grant-nov-2026",
       "title": "Artist Grant, נובמבר",
