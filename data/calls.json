@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T05:25:15Z",
+  "updatedAt": "2026-11-17T05:19:41Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -1253,6 +1253,29 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-14"
+    },
+    {
+      "id": "rotterdam-photo-2027",
+      "title": "Rotterdam Photo 2027: VIBRANCE",
+      "org": "Rotterdam Photo",
+      "url": "https://site.picter.com/rotterdam-photo-2027",
+      "deadline": "2026-12-10",
+      "region": "abroad",
+      "place": "רוטרדם, הולנד",
+      "type": "festival",
+      "fee": "paid",
+      "feeNote": "19 אירו לתמונה, 29–35 אירו לפרויקט",
+      "desc": "קול קורא בינלאומי לפסטיבל הצילום ברוטרדם (מרץ 2027, בשבוע האמנות). נבחרים מקבלים חלל תצוגה לפרויקט או הדפסה ענקית על מכולה, בלי עמלה על מכירות.",
+      "tags": [
+        "פסטיבל צילום",
+        "תערוכה"
+      ],
+      "topics": [
+        "photo"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-17"
     }
   ]
 }
