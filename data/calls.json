@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T05:19:41Z",
+  "updatedAt": "2026-11-18T05:35:04Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -226,11 +226,12 @@
       "desc": "מענקים של 4,500$ ו־1,000$ לאמנים וצלמים מכל העולם, ועוד רשימה קצרה של 30 לחשיפה.",
       "tags": [],
       "verified": true,
-      "status": "open",
+      "status": "recurring",
       "addedAt": "2026-11-01",
       "topics": [
         "any"
-      ]
+      ],
+      "lastDeadline": "17.11.26"
     },
     {
       "id": "israel-festival-2027",
@@ -1276,6 +1277,28 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-17"
+    },
+    {
+      "id": "davinci-residency-2027",
+      "title": "שהות אמן.ית בסדנאות דה וינצ׳י",
+      "org": "ת״א תרבות דה וינצ׳י",
+      "url": "https://linktr.ee/tatarbut_davinci",
+      "deadline": "2026-11-22",
+      "region": "il",
+      "place": "תל אביב",
+      "type": "residency",
+      "fee": "unknown",
+      "desc": "תוכנית שהות אמנים במרכז ת״א תרבות דה וינצ׳י בתל אביב (שבו סדנאות עץ, אלקטרוניקה וטקסטיל), לתקופה ינואר–יולי 2027. תנאי סף: תערוכת יחיד אחת ושלוש תערוכות קבוצתיות.",
+      "tags": [
+        "רזידנסי",
+        "תל אביב"
+      ],
+      "topics": [
+        "any"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-18"
     }
   ]
 }
