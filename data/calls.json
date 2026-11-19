@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T05:35:04Z",
+  "updatedAt": "2026-11-19T05:25:59Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -994,8 +994,9 @@
         "any"
       ],
       "verified": true,
-      "status": "open",
-      "addedAt": "2026-11-10"
+      "status": "recurring",
+      "addedAt": "2026-11-10",
+      "lastDeadline": "17.11.26"
     },
     {
       "id": "bernheim-air-2027",
