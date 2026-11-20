@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T05:25:59Z",
+  "updatedAt": "2026-11-20T05:20:40Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -1300,6 +1300,50 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-18"
+    },
+    {
+      "id": "helene-wurlitzer-2028",
+      "title": "רזידנסי 2028, קרן הלן וורליצר",
+      "org": "The Helene Wurlitzer Foundation of New Mexico",
+      "url": "https://www.aapgh.org/artist-opportunities/2026/1/22/2028-residencies-at-the-helene-wurlitzer-foundation-due-jan-18-2027",
+      "deadline": "2027-01-18",
+      "region": "abroad",
+      "place": "טאוס, ארה״ב",
+      "type": "residency",
+      "fee": "unknown",
+      "desc": "רזידנסי לאמנים חזותיים, כותבים ומלחינים בטאוס, ניו מקסיקו. מקבלים בית מרוהט עם סטודיו ללא תשלום שכירות וחשבונות; אוכל ונסיעות על חשבון האמן.",
+      "tags": [
+        "דיור חינם",
+        "ארה״ב"
+      ],
+      "topics": [
+        "any"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-20"
+    },
+    {
+      "id": "world-sports-photo-awards-2027",
+      "title": "World Sports Photography Awards 2027",
+      "org": "World Sports Photography Awards",
+      "url": "https://worldsportsphotographyawards.com/",
+      "deadline": "2026-11-23",
+      "region": "online",
+      "place": "",
+      "type": "prize",
+      "fee": "free",
+      "desc": "תחרות בינלאומית לצילום ספורט ב־24 קטגוריות, פתוחה לכל העולם והגשה חינם. עד 10 תמונות שצולמו מדצמבר 2025 עד נובמבר 2026, כולל פרס לצלמים מתחת לגיל 25.",
+      "tags": [
+        "הגשה חינם",
+        "צילום ספורט"
+      ],
+      "topics": [
+        "photo"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-20"
     }
   ]
 }
