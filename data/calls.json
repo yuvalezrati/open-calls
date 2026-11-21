@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T05:20:40Z",
+  "updatedAt": "2026-11-21T05:14:50Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -1344,6 +1344,29 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-20"
+    },
+    {
+      "id": "wildlife-photographer-2027",
+      "title": "Wildlife Photographer of the Year 2027",
+      "org": "Natural History Museum, לונדון",
+      "url": "https://www.nhm.ac.uk/visit/wpy/competition/adult-competition.html",
+      "deadline": "2026-12-03",
+      "region": "abroad",
+      "place": "בריטניה",
+      "type": "prize",
+      "fee": "paid",
+      "feeNote": "£35 לעד 25 תמונות; חינם לגילאי 18–26",
+      "desc": "תחרות צילום הטבע הבינלאומית של מוזיאון הטבע בלונדון, כולל קטגוריות פורטפוליו וסיפור צילומי. הפרס הראשי £15,000 ותערוכה במוזיאון ובסיבוב בינלאומי.",
+      "tags": [
+        "צילום טבע",
+        "פורטפוליו"
+      ],
+      "topics": [
+        "photo"
+      ],
+      "verified": true,
+      "status": "open",
+      "addedAt": "2026-11-21"
     }
   ]
 }
