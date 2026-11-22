@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T05:14:50Z",
+  "updatedAt": "2026-11-22T05:19:36Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -59,11 +59,12 @@
         "סאונד"
       ],
       "verified": true,
-      "status": "open",
+      "status": "recurring",
       "addedAt": "2026-11-01",
       "topics": [
         "sound"
-      ]
+      ],
+      "lastDeadline": "18.11.26"
     },
     {
       "id": "braun-prize",
@@ -1367,6 +1368,27 @@
       "verified": true,
       "status": "open",
       "addedAt": "2026-11-21"
+    },
+    {
+      "id": "air-insilo-2027",
+      "title": "AIR InSILo 2027: When the Hourless Seeps",
+      "org": "AIR InSILo",
+      "url": "https://in-silo.com/open_call_2027_stage_1",
+      "deadline": "2026-12-30",
+      "region": "abroad",
+      "place": "הולברון, אוסטריה",
+      "type": "residency",
+      "fee": "unknown",
+      "desc": "רזידנסי של שבעה שבועות באפריל–יולי 2027 בהולברון, פתוח לכל המדיומים. כולל שכר אמן עד 2,450 אירו, חומרים ונסיעות, ליווי אוצרותי ופרסום במגזין InSILo.",
+      "tags": [
+        "שלב ראשון מתוך שניים"
+      ],
+      "topics": [
+        "any"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-22"
     }
   ]
 }
