@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T05:19:36Z",
+  "updatedAt": "2026-11-23T05:14:44Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -1231,8 +1231,9 @@
         "any"
       ],
       "verified": true,
-      "status": "open",
-      "addedAt": "2026-11-14"
+      "status": "recurring",
+      "addedAt": "2026-11-14",
+      "lastDeadline": "22.11.26"
     },
     {
       "id": "traces-sion-2027",
@@ -1254,8 +1255,9 @@
         "any"
       ],
       "verified": false,
-      "status": "open",
-      "addedAt": "2026-11-14"
+      "status": "recurring",
+      "addedAt": "2026-11-14",
+      "lastDeadline": "22.11.26"
     },
     {
       "id": "rotterdam-photo-2027",
@@ -1299,8 +1301,9 @@
         "any"
       ],
       "verified": false,
-      "status": "open",
-      "addedAt": "2026-11-18"
+      "status": "recurring",
+      "addedAt": "2026-11-18",
+      "lastDeadline": "22.11.26"
     },
     {
       "id": "helene-wurlitzer-2028",
@@ -1389,6 +1392,29 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-22"
+    },
+    {
+      "id": "ligeti-center-residency-2027",
+      "title": "Where Sound Shapes Space: רזידנסי אמנים ומדענים 2027",
+      "org": "ligeti center, המבורג",
+      "url": "https://ligeti-zentrum.de/residency-2027/",
+      "deadline": "2027-01-10",
+      "region": "abroad",
+      "place": "המבורג, גרמניה",
+      "type": "residency",
+      "fee": "free",
+      "desc": "רזידנסי בין־תחומי בסאונד ומוזיקה, אפריל עד סוף יוני 2027, על בסיס אחד מארבעה פרויקטים מוגדרים. כולל מלגה של 1,200 אירו נטו לחודש, מגורים בהמבורג, סטודיו, מעבדת הפקה ותיעוד מקצועי.",
+      "tags": [
+        "מלגה חודשית",
+        "סאונד"
+      ],
+      "topics": [
+        "sound",
+        "newmedia"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-23"
     }
   ]
 }
