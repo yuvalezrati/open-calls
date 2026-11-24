@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T05:14:44Z",
+  "updatedAt": "2026-11-24T05:21:21Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -1346,8 +1346,9 @@
         "photo"
       ],
       "verified": false,
-      "status": "open",
-      "addedAt": "2026-11-20"
+      "status": "recurring",
+      "addedAt": "2026-11-20",
+      "lastDeadline": "23.11.26"
     },
     {
       "id": "wildlife-photographer-2027",
@@ -1415,6 +1416,74 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-23"
+    },
+    {
+      "id": "teddy-mecholelim-2028",
+      "title": "מחוללים: בין אנלוגי לדיגיטלי",
+      "org": "הגלריה החדשה, סדנאות האמנים טדי",
+      "url": "https://www.erev-rav.com/archives/63237",
+      "deadline": null,
+      "region": "il",
+      "place": "ירושלים",
+      "type": "exhibition",
+      "fee": "unknown",
+      "desc": "קול קורא לתערוכה קבוצתית בגלריה החדשה בסדנאות האמנים טדי בירושלים, שתיפתח בינואר 2028. אפשר להציע עבודה חדשה או קיימת.",
+      "tags": [
+        "תערוכה קבוצתית",
+        "אנלוגי ודיגיטלי"
+      ],
+      "topics": [
+        "any",
+        "newmedia"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-24"
+    },
+    {
+      "id": "yahalom-nature-moon-time",
+      "title": "זמן טבע, זמן ירח, זמן אמנות",
+      "org": "גלריה יהלום, תאטרון יהלום",
+      "url": "https://www.erev-rav.com/archives/63277",
+      "deadline": null,
+      "region": "il",
+      "place": "רמת גן",
+      "type": "exhibition",
+      "fee": "unknown",
+      "desc": "קול קורא לתערוכה קבוצתית שתוצג בגלריה יהלום בתאטרון יהלום ברמת גן.",
+      "tags": [
+        "תערוכה קבוצתית"
+      ],
+      "topics": [
+        "any"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-24"
+    },
+    {
+      "id": "monson-arts-spring-2027",
+      "title": "Monson Arts, רזידנסי אביב 2027",
+      "org": "Monson Arts",
+      "url": "https://monsonarts.org/residencies/",
+      "deadline": "2027-01-15",
+      "region": "abroad",
+      "place": "ארה״ב",
+      "type": "residency",
+      "fee": "paid",
+      "feeNote": "דמי הגשה 25$",
+      "desc": "רזידנסי של 2–4 שבועות במיין לאמנים חזותיים וכותבים מכל העולם, עם סטודיו, מגורים וארוחות ומלגה של 500$. יש מסלול צילום עם חדר חושך פרטי וסטודיו דיגיטלי.",
+      "tags": [
+        "רזידנסי",
+        "חדר חושך"
+      ],
+      "topics": [
+        "photo",
+        "any"
+      ],
+      "verified": false,
+      "status": "open",
+      "addedAt": "2026-11-24"
     }
   ]
 }
