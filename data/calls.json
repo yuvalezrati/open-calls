@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T05:21:21Z",
+  "updatedAt": "2026-11-25T05:20:39Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -573,8 +573,8 @@
         "€6,000"
       ],
       "verified": true,
-      "status": "open",
-      "lastDeadline": null,
+      "status": "recurring",
+      "lastDeadline": "23.11.26",
       "addedAt": "2026-11-09",
       "id": "mon-art-nicosia-2027",
       "title": "MON-ART: רזידנסי במנזר האמנויות, ניקוסיה",
@@ -818,8 +818,8 @@
       "feeNote": "",
       "tags": [],
       "verified": false,
-      "status": "open",
-      "lastDeadline": null,
+      "status": "recurring",
+      "lastDeadline": "24.11.26",
       "addedAt": "2026-11-09",
       "id": "moc-artists-hardship-2026",
       "title": "סיוע לאמנים במצוקה כלכלית 2026",
@@ -1484,6 +1484,28 @@
       "verified": false,
       "status": "open",
       "addedAt": "2026-11-24"
+    },
+    {
+      "id": "contact-open-exhibitions-2027",
+      "title": "CONTACT 2027, תערוכות פתוחות",
+      "org": "CONTACT Photography Festival",
+      "url": "https://contactphoto.com/festival/open-exhibitions",
+      "deadline": "2027-01-18",
+      "region": "abroad",
+      "place": "טורונטו, קנדה",
+      "type": "festival",
+      "fee": "free",
+      "desc": "רישום חינמי ובלי שיפוט לתערוכת צילום במסגרת פסטיבל CONTACT בטורונטו, מאי 2027. צריך להשיג בעצמכם חלל תצוגה באזור טורונטו לפני הרישום; הפסטיבל נותן חשיפה ורישום בתוכנייה, בלי מימון.",
+      "tags": [
+        "ללא שיפוט",
+        "צריך חלל משלכם"
+      ],
+      "topics": [
+        "photo"
+      ],
+      "verified": true,
+      "status": "open",
+      "addedAt": "2026-11-25"
     }
   ]
 }
