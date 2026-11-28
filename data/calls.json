@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T05:21:04Z",
+  "updatedAt": "2026-11-28T05:20:10Z",
   "calls": [
     {
       "id": "arcathens-2027",
@@ -354,12 +354,13 @@
         "וידאו"
       ],
       "verified": false,
-      "status": "open",
+      "status": "recurring",
       "addedAt": "2026-11-01",
       "topics": [
         "video",
         "sound"
-      ]
+      ],
+      "lastDeadline": "25.11.26"
     },
     {
       "id": "miron-sima",
@@ -671,8 +672,8 @@
         "יריד"
       ],
       "verified": false,
-      "status": "open",
-      "lastDeadline": null,
+      "status": "recurring",
+      "lastDeadline": "10.11.26",
       "addedAt": "2026-11-09",
       "id": "black-white-red-dot-miami",
       "title": "Black & White Gallery ב־Red Dot Miami",
